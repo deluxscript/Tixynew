@@ -611,8 +611,7 @@ class EventCheckoutController extends Controller
                      */
                     foreach ($attendee_details['ticket']->questions as $question) {
 
-
-                        $ticket_answer = isset($ticket_questions[$attendee_details['ticket']->id][$i][$question->id]) ? $ticket_questions[$attendee_details['ticket']->id][$i][$question->id] : null;
+                        $ticket_answer = isset($ticket_questions[$attendee_details['ticket']->id][1][$question->id]) ? $ticket_questions[$attendee_details['ticket']->id][1][$question->id] : null;
 
                         if (is_null($ticket_answer)) {
                             continue;

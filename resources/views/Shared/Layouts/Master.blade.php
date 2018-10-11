@@ -350,7 +350,7 @@ a {
 }
 
 #countdown {
-  color: #CA372C;
+  color: #514E4B
 }
 
 .panel {

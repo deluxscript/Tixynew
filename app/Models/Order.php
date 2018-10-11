@@ -145,7 +145,7 @@ class Order extends MyBaseModel
 
         $j = 0;
         $count_attendee = count($orderattendees);
-        for($i = 0; $i < $count_attendee; $i++) {
+        for($i = 0, $m = 0; $i < $count_attendee, $m < $count_attendee; $i++, $m++) {
 
             $result = [$attendees[$i]];
         $data = [
@@ -156,8 +156,8 @@ class Order extends MyBaseModel
             'css'       => file_get_contents(public_path('assets/stylesheet/ticket.css')),
             'image'     => base64_encode(file_get_contents(public_path($this->event->organiser->full_logo_path))),
         ];
-        $file_name = $this->reference;
-        $pdf_file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/Tickets' . $file_name . $j;
+        $file_name = $attendees[0]['first_name']. '_' .$attendees[0]['last_name']. '_' .$this->reference;
+        $pdf_file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . $j;
         $pdf_file = $pdf_file_path . '.pdf';
 
         if (file_exists($pdf_file)) {
@@ -175,7 +175,7 @@ class Order extends MyBaseModel
     }
 
 
-        $this->ticket_pdf_path = config('attendize.event_pdf_tickets_path') . '/Tickets' . $file_name . $j . '.pdf';
+        $this->ticket_pdf_path = config('attendize.event_pdf_tickets_path') . '/' . $file_name . $j . '.pdf';
         $this->save();
 
         return file_exists($pdf_file);

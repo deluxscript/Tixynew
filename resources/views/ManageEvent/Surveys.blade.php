@@ -1,3 +1,10 @@
+{{-- <th>
+    Required
+</th> --}}
+
+{{-- <td>
+    {{ $question->is_required ? 'Yes' : 'No' }}
+</td> --}}
 @extends('Shared.Layouts.Master')
 
 @section('title')
@@ -36,7 +43,7 @@
                 </button>
             </div>
 
-            <div class="btn-group btn-group btn-group-responsive">
+            {{-- <div class="btn-group btn-group btn-group-responsive">
                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
                     <i class="ico-users"></i> Export Answers <span class="caret"></span>
                 </button>
@@ -50,7 +57,7 @@
                     <li><a href="{{route('showExportAnswers', ['event_id'=>$event->id,'export_as'=>'html'])}}">HTML</a>
                     </li>
                 </ul>
-            </div>
+            </div> --}}
         </div>
         <!--/ Toolbar -->
     </div>
@@ -145,9 +152,9 @@
                             <th>
                                 Question Title
                             </th>
-                            <th>
-                                Required
-                            </th>
+
+                            
+                            
                             <th>
                                 Status
                             </th>
@@ -172,9 +179,9 @@
                                         <span style="font-size: 11px; color: #888;"
                                               class="muted">Tickets: {{implode(', ', array_column($question->tickets->toArray(), 'title'))}}</span>
                                     </td>
-                                    <td>
-                                        {{ $question->is_required ? 'Yes' : 'No' }}
-                                    </td>
+
+                                    
+                                    
                                     <td>
                                         <span class="label label-{{ $question->is_enabled ? 'info' : 'warning' }}">{{ $question->is_enabled ? 'Enabled' : 'Disabled' }}</span>
                                     </td>

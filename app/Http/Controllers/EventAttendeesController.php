@@ -531,7 +531,9 @@ class EventAttendeesController extends MyBaseController
 
         $this->dispatch(new GenerateTicket($attendee->order->order_reference . "-" . $attendee->reference_index));
 
-        $pdf_file_name = $attendee->order->order_reference . '-' . $attendee->reference_index;
+        //$pdf_file_name = $attendee->order->order_reference . '-' . $attendee->reference_index;
+        $pdf_file_name = $attendee['first_name']. '_' .$attendee['last_name']. '_' .$attendee->order->order_reference . '-' . $attendee->reference_index . '0';
+        // dd($file_name);
         $pdf_file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $pdf_file_name;
         $pdf_file = $pdf_file_path . '.pdf';
 

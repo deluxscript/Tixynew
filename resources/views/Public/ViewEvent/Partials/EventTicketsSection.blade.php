@@ -6,8 +6,8 @@
     }
 
     .ticket, .ticket-descripton {
-        font-size: 14px;
-        line-height: 160%;
+        font-size: 19px;
+        line-height: 33px;
     }
 
     .humane, .humane-flatty {
@@ -24,8 +24,8 @@
 
     @font-face {
         font-family: 'FuturaPTBook';
-        src: url('http://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.woff') format('woff'),
-            url('http://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('truetype');
+        src: url('https://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('woff'),
+            url('https://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
@@ -47,6 +47,7 @@
         @if($tickets->count() > 0)
 
             {!! Form::open(['url' => route('postValidateTickets', ['event_id' => $event->id]), 'class' => 'ajax']) !!}
+                {{-- {!! csrf_field() !!} --}}
             <div class="row">
                 <div class="col-md-12">
                     <div class="content">
@@ -128,7 +129,7 @@
                                         @if(!$is_free_event)
                                             <div class="hidden-xs pull-left">
                                                 <img class=""
-                                                     src="{{asset('assets/images/public/EventPage/cards.png')}}" width="170"/>
+                                                     src="https://storage.googleapis.com/enterfive-tixy-bucket/assets/images/public/EventPage/cards.png" width="170"/>
                                                 @if($event->enable_offline_payments)
 
                                                     <div class="help-block" style="font-size: 11px;">

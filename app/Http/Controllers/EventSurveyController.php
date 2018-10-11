@@ -243,6 +243,7 @@ class EventSurveyController extends MyBaseController
             'answers'  => $answers,
             'question' => $question,
         ];
+        
 
         return view('ManageEvent.Modals.ViewAnswers', $data);
     }

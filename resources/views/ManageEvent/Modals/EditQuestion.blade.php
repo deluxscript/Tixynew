@@ -76,12 +76,12 @@
                             </table>
                         </fieldset>
 
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <div class="custom-checkbox ">
                             {!! Form::checkbox('is_required', 1, $question->is_required, ['data-toggle' => 'toggle', 'id' => 'is_required']) !!}
                             {!! Form::label('is_required', 'Make this a required question') !!}
                                 </div>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group">
                             <label>

@@ -10,12 +10,13 @@
          /_/    \_\__|\__\___|_| |_|\__,_|_/___\___(_)___\___/|_| |_| |_|
 
         -->
-        <title>{{{$event->title}}} - Attendize.com</title>
+        <title>{{{$event->title}}} - Tixy</title>
 
 
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <link rel="canonical" href="{{$event->event_url}}" />
 
 
@@ -72,9 +73,6 @@
             .attendize, *  {
                 font-family: 'FuturaPTBook'!important;
             }
-		#countdown {
-			color: #CA372C
-		}
 
         </style>
         @if ($event->bg_type == 'color' || Input::get('bg_color_preview'))

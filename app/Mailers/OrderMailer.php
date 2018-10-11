@@ -33,16 +33,16 @@ class OrderMailer
 
         Mail::send('Mailers.TicketMailer.SendOrderTickets', $data, function ($message) use ($order) {
             $message->to($order->email);
-            $message->subject('Your tickets for the event ' . $order->event->title);
+            $message->subject('Your tickets for the ' . $order->event->title);
 
             $query = $order->attendees();
             $attendees = $query->get();
             $count_attendee = count($attendees);
-            $file_name = $order->order_reference;
             $j = 0;
-
             do {
-                $file_path = public_path(config('attendize.event_pdf_tickets_path') . '/Tickets' . $file_name . $j . '.pdf');
+                $file_name = $attendees[$j]['first_name']. '_' .$attendees[$j]['last_name']. '_' .$order->order_reference;
+            
+                $file_path = public_path(config('attendize.event_pdf_tickets_path') . '/' . $file_name . $j . '.pdf');
                 $message->attach($file_path);
                 $j++;
             } while ($j < $count_attendee);

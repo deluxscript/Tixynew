@@ -3,4 +3,3 @@
 <div class="powered_by_embedded" style="display: none;">
     @include('Shared.Partials.PoweredBy')
 </div>
-<script type="text/javascript" src="/assets/javascript/iframeSizer.contentWindow.min.js"></script>

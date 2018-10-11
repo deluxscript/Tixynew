@@ -35,4 +35,5 @@ class SendAttendeeTicket extends Job implements ShouldQueue
         $this->dispatchNow(new GenerateTicket($this->attendee->reference));
         $attendeeMailer->sendAttendeeTicket($this->attendee);
     }
+    
 }

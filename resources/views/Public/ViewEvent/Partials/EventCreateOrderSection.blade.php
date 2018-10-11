@@ -1,18 +1,22 @@
 <style>
     @font-face {
         font-family: 'FuturaPTBook';
-        src: url('http://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.woff') format('woff'),
-            url('http://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('truetype');
+        src: url('https://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('woff'),
+            url('https://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
     }
     #hidee {
         display: none!important;
     }
+    .btn-success[disabled] {
+        cursor: not-allowed !important;
+        pointer-events: auto;
+    }
     .dim-pay {
         background: black;
         height: 100%;
-        position: absolute;
+        position: fixed;
         width: 100%;
         top: 0px;
         left: 0;
@@ -22,9 +26,6 @@
     .dim-pay div {
         text-align: center;
         margin-top: 70px;
-    }
-	#countdown {
-		color: #CA372C
     }
 </style>
 <script src="https://js.paystack.co/v1/inline.js"></script>
@@ -71,11 +72,14 @@
             </div>
             <div class="help-block" style="font-size: 20px;">
                 Please note you only have <span id='countdown'></span> to complete this transaction before your tickets are re-released.
+		<br>
+		<br>
+		To edit ticket information, refresh page.
             </div>
         </div>
         <div class="col-md-8 col-md-pull-4">
             <div class="event_order_form">
-                {!! Form::open(['url' => route('postCreateOrder', ['event_id' => $event->id]), 'class' => ($order_requires_payment && @$payment_gateway->is_on_site) ? 'ajax payment-form' : 'ajax', 'data-stripe-pub-key' => isset($account_payment_gateway->config['publishableKey']) ? $account_payment_gateway->config['publishableKey'] : '']) !!}
+                {!! Form::open(['url' => route('postCreateOrder', ['event_id' => $event->id]), 'id' => 'enablee', 'class' => ($order_requires_payment && @$payment_gateway->is_on_site) ? 'ajax payment-form' : 'ajax', 'data-stripe-pub-key' => isset($account_payment_gateway->config['publishableKey']) ? $account_payment_gateway->config['publishableKey'] : '']) !!}
 
                 {!! Form::hidden('event_id', $event->id) !!}
 
@@ -101,13 +105,14 @@
                         <div class="form-group">
                             {!! Form::label("order_email", 'Email') !!}
                             {!! Form::text("order_email", null, ['required' => 'required', 'id' => 'pemail', 'class' => 'form-control']) !!}
+                            <p style="font-size: 13px"><span style="font-size: 10px">*</span> Please note that tickets will only be sent to buyer's email</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="p20 pl0">
-                    <a href="javascript:void(0);" class="btn btn-primary btn-lg" id="mirror_buyer_info">
-                        Copy buyer details to all ticket holders
+                    <a href="javascript:void(0);" class="btn btn-primary" style="width:100%; text-transform: uppercase;" id="mirror_buyer_info">
+                        Copy buyer's details to all ticket holders
                     </a>
                 </div>
 
@@ -147,9 +152,9 @@
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", 'Email Address') !!}
                                                     {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email form-control"]) !!}
+						    <p style="font-size: 13px"><span style="font-size: 10px">*</span> Please note that tickets will only be sent to buyer's email</p>
                                                 </div>
                                             </div>
-                                            @include('Public.ViewEvent.Partials.AttendeeQuestions', ['ticket' => $ticket['ticket'],'attendee_number' => $total_attendee_increment++])
 
                                         </div>
 
@@ -159,6 +164,7 @@
                                 </div>
                                 @endfor
                             @endforeach
+                            @include('Public.ViewEvent.Partials.AttendeeQuestions', ['ticket' => $ticket['ticket'],'attendee_number' => $total_attendee_increment++])
                         </div>
                     </div>
                 </div>
@@ -170,8 +176,6 @@
                 </style>
 
                 @if($order_requires_payment)
-
-                <h3>Payment Information</h3>
 
                 @if($event->enable_offline_payments)
                     <div class="offline_payment_toggle">
@@ -240,7 +244,7 @@
                 @endif
 
             {!! Form::hidden('is_embedded', $is_embedded) !!}
-            {!! Form::submit('Checkout', ['class' => 'btn btn-lg btn-success card-submit', 'style' => 'width:100%;', 'id' => 'paystacksubmit']) !!}
+            {!! Form::submit('Checkout', ['disabled', 'title' => 'Answer all fields', 'class' => 'btn btn-lg btn-success card-submit', 'style' => 'width:100%;', 'id' => 'paystacksubmit']) !!}
 
             </div>
         </div>

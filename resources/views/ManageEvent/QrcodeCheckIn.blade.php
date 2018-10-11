@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>
-      Attendize QRCode Check In: {{ $event->title }}
+      Tixy QRCode Check In: {{ $event->title }}
   </title>
 
     {!! HTML::style('assets/stylesheet/application.css') !!}
@@ -35,7 +35,7 @@
 <body>
   <div id="main">
     <header id="header">
-      <h2 class="text-center"><img style="width: 40px;" class="logo" alt="Attendize" src="{{ asset('/assets/images/logo-dark.png') }}"/><br><span style="font-size: 0.7em;">Check In: <strong>{{ $event->title }}</strong></span></h2>
+      <h2 class="text-center"><img style="width: 40px;" class="logo" alt="tixy" src="{{ asset('/assets/images/logo-dark.png') }}"/><br><span style="font-size: 0.7em;">Check In: <strong>{{ $event->title }}</strong></span></h2>
     </header>
 
     <hr>
@@ -84,7 +84,7 @@
     <footer id="footer">
       <br>
       <br>
-      <h5 align="center" style="color: #6D717A;">Powered By <a href="https://www.attendize.com/">Attendize</a> </h5>
+      <h5 align="center" style="color: #6D717A;">Powered By <a href="https://tixy.ng/">Tixy</a> </h5>
     </footer>
   </div>
 

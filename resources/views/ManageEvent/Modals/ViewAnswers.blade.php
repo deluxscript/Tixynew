@@ -14,7 +14,7 @@
                                <thead>
                                <tr>
                                    <th>
-                                       Attendee Details
+                                       Buyer/Patron Details
                                    </th>
                                    <th>
                                        Ticket
@@ -29,12 +29,12 @@
                                @foreach($answers as $answer)
                                    <tr>
                                        <td>
-
-                                           {{ $answer->attendee->full_name }}
+                                            {{ $answer->attendee->order->first_name . " " . $answer->attendee->order->last_name }}
+                                           {{-- {{ $answer->attendee->full_name }} --}}
                                            @if($answer->attendee->is_cancelled)
-                                               (<span title="This attendee has been cancelled" class="text-danger">Cancelled</span>)
+                                               (<span title="This buyer/patron has been cancelled" class="text-danger">Cancelled</span>)
                                            @endif<br>
-                                           <a title="Go to attendee: {{ $answer->attendee->full_name }}" href="{{route('showEventAttendees', ['event_id' => $answer->attendee->event_id, 'q' => $answer->attendee->reference])}}">{{ $answer->attendee->email }}</a><br>
+                                           <a title="Go to Buyer/Patron: {{ $answer->attendee->full_name }}" href="{{route('showEventAttendees', ['event_id' => $answer->attendee->event_id, 'q' => $answer->attendee->reference])}}">{{ $answer->attendee->email }}</a><br>
 
                                        </td>
                                        <td>

@@ -229,35 +229,30 @@ class Event extends MyBaseModel
     public function getSurveyAnswersAttribute()
     {
         $rows[] = array_merge([
-            'Order Ref',
-            'Attendee Name',
-            'Attendee Email',
-            'Attendee Ticket'
+            'Purchase Date',
+            'Patron Name',
+            'Patron Email'
+            // 'Attendee Ticket'
         ], $this->questions->lists('title')->toArray());
 
         $attendees = $this->attendees()->has('answers')->get();
-
+        
         foreach ($attendees as $attendee) {
-
+            //echo $attendee;
             $answers = [];
-
             foreach ($this->questions as $question) {
-
-                if (in_array($question->id, $attendee->answers->lists('question_id')->toArray())) {
+                if (in_array($question->id, $attendee->answers->pluck('question_id')->toArray())) {
                     $answers[] = $attendee->answers->where('question_id', $question->id)->first()->answer_text;
                 } else {
                     $answers[] = null;
                 }
-
             }
-
             $rows[] = array_merge([
                 $attendee->order->order_reference,
                 $attendee->full_name,
                 $attendee->email,
                 $attendee->ticket->title
             ], $answers);
-
         }
 
         return $rows;
@@ -270,9 +265,9 @@ class Event extends MyBaseModel
      */
     public function getEmbedHtmlCodeAttribute()
     {
-        return "<!--Attendize.com Ticketing Embed Code-->
+        return "<!--Tixy.ng Ticketing Embed Code-->
                 <iframe style='overflow:hidden; min-height: 750px;' frameBorder='0' seamless='seamless' width='100%' height='100%' src='" . $this->embed_url . "' vspace='0' hspace='0' scrolling='no' allowtransparency='true'></iframe>
-                <!--/Attendize.com Ticketing Embed Code-->";
+                <!--/Tixy.ng Ticketing Embed Code-->";
     }
 
     /**

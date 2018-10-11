@@ -9,7 +9,8 @@ class VerifyCsrfToken extends BaseVerifier
 {
     protected $except = [
         'install/*',
-        'api/*'
+        'api/*',
+        '*/checkout/*'
     ];
 
     /**

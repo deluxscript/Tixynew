@@ -59,7 +59,7 @@ class GenerateTicket extends Job implements ShouldQueue
         // $result = [];
         $j = 0;
         $count_attendee = count($attendees);
-        for($i = 0; $i < $count_attendee; $i++) {
+        for($i = 0, $m = 0; $i < $count_attendee, $m < $count_attendee; $i++, $m++) {
         // foreach ($attendees as $single_attendee) {
             // $one = $count_attendee[$i];
 
@@ -74,8 +74,10 @@ class GenerateTicket extends Job implements ShouldQueue
                 'image'     => base64_encode(file_get_contents(public_path($image_path))),
             ];
 
-            $file_name = $this->reference;
-            $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/Tickets' . $file_name . $j;
+            // $file_name = $this->reference;
+            // print_r($attendees[$m]['first_name']);
+            $file_name = $attendees[$m]['first_name']. '_' .$attendees[$m]['last_name']. '_' .$this->reference;
+            $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . $j;
             $file_with_ext = $file_path . ".pdf";
 
             if (file_exists($file_with_ext)) {
