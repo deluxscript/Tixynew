@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^(.*)$ public/$1 [L]
+
+AddHandler fcgid-script .php 
+FCGIWrapper "/dh/cgi-system/php71.cgi" .php
