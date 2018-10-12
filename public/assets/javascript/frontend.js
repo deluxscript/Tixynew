@@ -4574,7 +4574,7 @@ function payWithPaystack(){
   Amtnum = Amtnum.join("");
   var TotalAmtt = Number(Amtnum);
   var handler = PaystackPop.setup({
-    key: 'pk_test_c31ca39214fff76ad3fa6c50e1a5bbfb3d4720a2',
+    key: 'pk_test_3adb59c58af1c11a841fd7fe21a27508878babd1',
     email: pemail,
     amount: TotalAmtt,
     ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
@@ -4692,7 +4692,7 @@ $(function() {
             var TotalAmtt = Number(Amtnum);
             $(window).scrollTop(0)
             var handler = PaystackPop.setup({
-              key: 'pk_test_c31ca39214fff76ad3fa6c50e1a5bbfb3d4720a2',
+              key: 'pk_test_3adb59c58af1c11a841fd7fe21a27508878babd1',
               email: pemail,
               amount: TotalAmtt,
               ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
