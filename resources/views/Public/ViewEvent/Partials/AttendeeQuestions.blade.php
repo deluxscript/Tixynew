@@ -2,7 +2,7 @@
     @if ($question['is_enabled'] === '1')
 
     <div class="col-md-12">
-        <div class="form-group">
+        <div class="form-group survey_question">
             {!! Form::label("ticket_holder_questions[{$ticket->id}][{$i}][$question->id]", $question->title, ['class' => $question->is_required ? 'required' : '']) !!}
 
             @if($question->question_type_id == config('attendize.question_textbox_single'))
@@ -55,7 +55,7 @@
     }
 
     function onChange() {
-        document.getElementById('paystacksubmit').disabled = numberOfCheckboxesSelected() < 2;
+        document.getElementById('paystacksubmit').disabled = numberOfCheckboxesSelected() < 1;
     }
     document.getElementById('enablee').addEventListener('change', onChange, false);
 </script>

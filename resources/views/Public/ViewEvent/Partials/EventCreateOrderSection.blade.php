@@ -266,6 +266,12 @@
         </div>
     </div>
 </section>
+<script>
+    var toHide = document.getElementsByClassName('survey_question');
+    if (toHide < 1 || toHide = null) {
+        document.getElementById("paystacksubmit").disabled = false;
+    }
+</script>
 @if(session()->get('message'))
     <script>showMessage('{{session()->get('message')}}');</script>
 @endif
