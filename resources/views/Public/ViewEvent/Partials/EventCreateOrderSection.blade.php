@@ -268,6 +268,7 @@
 </section>
 <script>
     var toHide = document.getElementsByClassName('survey_question');
+    console.log(toHide);
     if (toHide < 1 || toHide = null) {
         document.getElementById("paystacksubmit").disabled = false;
     }
