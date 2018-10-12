@@ -244,7 +244,7 @@
                 @endif
 
             {!! Form::hidden('is_embedded', $is_embedded) !!}
-            {!! Form::submit('disabled', 'Checkout', ['title' => 'Answer all fields', 'class' => 'btn btn-lg btn-success card-submit', 'style' => 'width:100%;', 'id' => 'paystacksubmit']) !!}
+            {!! Form::submit('Checkout', ['disabled', 'title' => 'Answer all fields', 'class' => 'btn btn-lg btn-success card-submit', 'style' => 'width:100%;', 'id' => 'paystacksubmit']) !!}
 
             </div>
         </div>
