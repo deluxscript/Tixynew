@@ -1,6 +1,6 @@
 <style>
     .ticket-bg, .ticket-bg:hover, .ticket-bg:focus, .disabled{
-        background-color: rgb(204, 53, 36);
+        background-color: #1e2edb;
         border: none;
         outline: none;
     }
