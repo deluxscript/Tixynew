@@ -4652,9 +4652,7 @@ $(function() {
                                         $.redirectPost(data.redirectUrl, data.redirectData);
                                         
                                     } else {
-                                      //window.location.replace(data.redirectUrl);
                                       document.location.href = data.redirectUrl;
-                                        //console.log('redirecting1...', data.redirectUrl);
                                     }
                                 }
                                 break;
