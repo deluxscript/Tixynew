@@ -79,7 +79,7 @@
         </div>
         <div class="col-md-8 col-md-pull-4">
             <div class="event_order_form">
-                {!! Form::open(['url' => route('postCreateOrder', ['event_id' => $event->id]), 'id' => 'enablee', 'class' => ($order_requires_payment && $payment_gateway->is_on_site) ? 'ajax payment-form' : 'ajax', 'data-stripe-pub-key' => isset($account_payment_gateway->config['publishableKey']) ? $account_payment_gateway->config['publishableKey'] : '']) !!}
+                {!! Form::open(['url' => route('postCreateOrder', ['event_id' => $event->id]), 'id' => 'enablee', 'class' => ($order_requires_payment && @$payment_gateway->is_on_site) ? 'ajax payment-form' : 'ajax', 'data-stripe-pub-key' => isset($account_payment_gateway->config['publishableKey']) ? $account_payment_gateway->config['publishableKey'] : '']) !!}
 
                 {!! Form::hidden('event_id', $event->id) !!}
 
