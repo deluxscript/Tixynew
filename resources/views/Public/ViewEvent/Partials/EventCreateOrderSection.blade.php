@@ -267,6 +267,10 @@
     </div>
 </section>
 <script>
+    window.onbeforeunload = confirmExit;
+    function confirmExit() {
+        return "You have attempted to leave this page. Are you sure?";
+    }
     var toHide = document.getElementsByClassName('survey_question');
     console.log(toHide);
     if (toHide < 1 || toHide = null) {
