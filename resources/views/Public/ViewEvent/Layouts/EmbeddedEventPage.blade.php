@@ -40,80 +40,94 @@
 
         <!--Bootstrap placeholder fix-->
         <style>
-            ::-webkit-input-placeholder { /* WebKit browsers */
-                color:    #ccc !important;
-            }
-            :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-                color:    #ccc !important;
-                opacity:  1;
-            }
-            ::-moz-placeholder { /* Mozilla Firefox 19+ */
-                color:    #ccc !important;
-                opacity:  1;
-            }
-            :-ms-input-placeholder { /* Internet Explorer 10+ */
-                color:    #ccc !important;
-            }
-
-            input, select {
-                color: #999 !important;
-            }
-
-            .btn {
-                color: #fff !important;
-            }
-
-            .close {
-			position: fixed;
-			width: 32px;
-			height: 32px;
-			right: 16px;
-			top: 16px;
-			background: url('http://icon-stash.surge.sh/x.svg');
-			background-position: center;
-			background-repeat: no-repeat;
-			background-size: 100%;
-			cursor: pointer;
-		}
-
-		.wrapper {
-			position: fixed;
-			width: 100vw;
-			height: 100vh;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background: rgba(0, 0, 0, 0.4)
-		}
-
-		iframe {
-			height: 90vh;
-			overflow: scroll;
-			border-radius: 4px;
-		}
-
-		.panel-heading>.panel-title {
-			font-size: 18px;
-			font-weight: 400;
-		}
-
-		.panel-footer h5 {
-			font-size: 18px !important;
-			font-weight: 600 !important;
-		}
-		#countdown {
-			color: #CA372C
-		}
-        </style>
-
-        <style type="text/css">
-            body {background:none !important;}
-            body {background:none transparent !important;}
-        </style>
+                ::-webkit-input-placeholder {
+                    /* WebKit browsers */
+                    color: #ccc !important;
+                }
+        
+                :-moz-placeholder {
+                    /* Mozilla Firefox 4 to 18 */
+                    color: #ccc !important;
+                    opacity: 1;
+                }
+        
+                ::-moz-placeholder {
+                    /* Mozilla Firefox 19+ */
+                    color: #ccc !important;
+                    opacity: 1;
+                }
+        
+                :-ms-input-placeholder {
+                    /* Internet Explorer 10+ */
+                    color: #ccc !important;
+                }
+        
+                input,
+                select {
+                    color: #999 !important;
+                }
+        
+                .btn {
+                    color: #fff !important;
+                }
+        
+                .close {
+                    position: fixed;
+                    width: 32px;
+                    height: 32px;
+                    right: 16px;
+                    top: 16px;
+                    background: url('http://icon-stash.surge.sh/x.svg');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    cursor: pointer;
+                }
+        
+                .wrapper {
+                    position: fixed;
+                    width: 100vw;
+                    height: 100vh;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: rgba(0, 0, 0, 0.4)
+                }
+        
+                iframe {
+                    height: 90vh;
+                    overflow: scroll;
+                    border-radius: 4px;
+                }
+        
+                .panel-heading>.panel-title {
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+        
+                .panel-footer h5 {
+                    font-size: 18px !important;
+                    font-weight: 600 !important;
+                }
+        
+                #countdown {
+                    color: #c92a2a
+                }
+            </style>
+        
+            <style type="text/css">
+                body {
+                    background: none !important;
+                }
+        
+                body {
+                    background: none transparent !important;
+                }
+            </style>
     </head>
     <body class="attendize">
         {{-- @if($event->event_url == 'http://dev.tixy.ng/e/4/art-x-talks')

@@ -1,5 +1,5 @@
 <style>
-    .ticket-bg, .ticket-bg:hover, .ticket-bg:focus, .disabled{
+        .ticket-bg, .ticket-bg:hover, .ticket-bg:focus, .disabled{
         background-color: #1e2edb;
         border: none;
         outline: none;
@@ -10,24 +10,12 @@
         line-height: 33px;
     }
 
-    .humane, .humane-flatty {
-        font-family: 'FuturaPTBook';
-    }
-
-    @media only screen and (max-width: 435px) {
+    @media  only screen and (max-width: 435px) {
 
         td {
             width: 300px !important;
             display: block !important;
         }
-    }
-
-    @font-face {
-        font-family: 'FuturaPTBook';
-        src: url('https://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('woff'),
-            url('https://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
     }
 </style>
 
