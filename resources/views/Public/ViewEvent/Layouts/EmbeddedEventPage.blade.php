@@ -70,6 +70,14 @@
                 .btn {
                     color: #fff !important;
                 }
+                .btn {
+                    text-transform: none !important;
+                    font-weight: 700 !important;
+                    border-radius: 4px !important;
+                    transition: 250ms ease-in-out !important;
+                    text-shadow: none;
+                    border: none !important;
+                }
         
                 .close {
                     position: fixed;
