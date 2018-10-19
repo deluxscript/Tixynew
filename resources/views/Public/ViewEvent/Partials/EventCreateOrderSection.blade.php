@@ -1,11 +1,11 @@
-{{-- <style>
-    @font-face {
+<style>
+    /* @font-face {
         font-family: 'FuturaPTBook';
         src: url('https://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('woff'),
             url('https://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
-    }
+    } */
     #hidee {
         display: none!important;
     }
@@ -27,7 +27,7 @@
         text-align: center;
         margin-top: 70px;
     }
-</style> --}}
+</style>
 <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
