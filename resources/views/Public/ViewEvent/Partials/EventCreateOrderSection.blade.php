@@ -30,7 +30,7 @@
 </style> --}}
 <style>
         #hidee {
-        display: none!important;
+        display: none !important;
     }
     .btn-success[disabled] {
         cursor: not-allowed !important;
