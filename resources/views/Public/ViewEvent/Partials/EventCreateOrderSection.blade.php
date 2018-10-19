@@ -62,11 +62,11 @@
             color: #212529;
         }
         .btn {
-            text-transform: none;
-            font-weight: 700;
-            border-radius: 4px;
-            transition: 250ms ease-in-out;
-            text-shadow: none;
+            text-transform: none !important;
+            font-weight: 700 !important;
+            border-radius: 4px !important;
+            transition: 250ms ease-in-out !important;
+            text-shadow: none !important;
             border: none !important;
         }
         .btn.btn-secondary {
