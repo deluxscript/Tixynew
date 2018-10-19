@@ -78,19 +78,12 @@
         
             <style>
                 body {
-                            background: url("./tixy-pattern.png");
-                            background-size: 1000px;
-                        }
-                    </style>
-        
-            <style>
-                body {
                     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
                     -webkit-font-smoothing: antialiased;
                     color: #495057;
                 }
                 #event_page_wrap {
-                    background: rgba(255,255,255,0.4)
+                    background: rgba(255,255,255,0.4);
                 }
                 .ticket {
                     color: #495057;
@@ -99,17 +92,17 @@
                     color: #212529;
                 }
                 .btn {
-                    text-transform: none;
-                    font-weight: 700;
-                    border-radius: 4px;
-                    transition: 250ms ease-in-out;
+                    text-transform: none !important;
+                    font-weight: 700 !important;
+                    border-radius: 4px !important;
+                    transition: 250ms ease-in-out !important;
                     text-shadow: none;
-                    border: none !important
+                    border: none !important;
                 }
                 .btn.btn-secondary {
                     background: #dbe4ff;
                     color: #1e2edb !important;
-                    margin-bottom: 16px
+                    margin-bottom: 16px;
                 }
                 .btn.btn-primary {
                     background-color: #1e2edb !important;
@@ -119,7 +112,7 @@
                 }
                 .btn.disabled, .btn[disabled] {
                     background: #e9ecef;
-                    color: #868e96 !important
+                    color: #868e96 !important;
                 }
                 #event_page_wrap #intro .event_buttons .btn-event-link {
                     text-transform: none;
@@ -153,16 +146,16 @@
                 .section_head {
                     font-weight: 700;
                     letter-spacing: 0;
-                    color: #212529
+                    color: #212529;
                 }
                 label {
-                    color: #868e96
+                    color: #868e96;
                 }
                 input[type="text"] {
                     border-radius: 4px;
                     border: none;
                     background: #e9ecef;
-                    color: #212529 !important
+                    color: #212529 !important;
                 }
                 .panel {
                     border-radius: 4px;
@@ -187,7 +180,7 @@
                     border-left: 1px solid #dee2e6 !important;
                     border-top: 1px solid #dee2e6 !important;
                     border-right: 1px solid #dee2e6 !important;
-                    color: #212529 !important
+                    color: #212529 !important;
                 }
                 .rrssb-text {
                     text-transform: capitalize;
@@ -197,12 +190,12 @@
                 }
         
                 #footer .container {
-                    box-shadow: none
+                    box-shadow: none;
                 }
         
                 #footer a,
                 #footer {
-                    color: #495057
+                    color: #495057;
                 }
                 </style>
         @if ($event->bg_type == 'color' || Input::get('bg_color_preview'))
