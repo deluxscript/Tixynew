@@ -67,7 +67,7 @@
             border-radius: 4px;
             transition: 250ms ease-in-out;
             text-shadow: none;
-            border: none !important
+            border: none !important;
         }
         .btn.btn-secondary {
             background: #dbe4ff;
@@ -79,7 +79,7 @@
         }
         .btn.disabled, .btn[disabled] {
             background: #e9ecef;
-            color: #868e96 !important
+            color: #868e96 !important;
         }
         h3 {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -93,7 +93,7 @@
             border-radius: 4px;
             border: none;
             background: #e9ecef;
-            color: #212529 !important
+            color: #212529 !important;
         }
         .panel {
             border-radius: 4px;
@@ -118,7 +118,7 @@
             border-left: 1px solid #dee2e6 !important;
             border-top: 1px solid #dee2e6 !important;
             border-right: 1px solid #dee2e6 !important;
-            color: #212529 !important
+            color: #212529 !important;
         }
         .help-block {
             padding: 16px;
@@ -130,7 +130,7 @@
             background: #ffa94d;
             text-align: left;
             color: #212529;
-            box-shadow: 0 32px 64px -8px #ffe8cc
+            box-shadow: 0 32px 64px -8px #ffe8cc;
         }
 </style>
 <script src="https://js.paystack.co/v1/inline.js"></script>
