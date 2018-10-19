@@ -1,4 +1,4 @@
-<style>
+{{-- <style>
     @font-face {
         font-family: 'FuturaPTBook';
         src: url('https://dev.tixy.ng/assets/stylesheet/icons/iconfont/fonts/FuturaPTBook.ttf') format('woff'),
@@ -27,6 +27,90 @@
         text-align: center;
         margin-top: 70px;
     }
+</style> --}}
+<style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            -webkit-font-smoothing: antialiased;
+            color: #495057;
+        }
+        .ticket {
+            color: #495057;
+        }
+        .ticket-title {
+            color: #212529;
+        }
+        .btn {
+            text-transform: none;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: 250ms ease-in-out;
+            text-shadow: none;
+            border: none !important
+        }
+        .btn.btn-secondary {
+            background: #dbe4ff;
+            color: #1e2edb !important;
+            margin-bottom: 16px
+        }
+        .btn:hover {
+            opacity: 0.8
+        }
+        .btn.disabled, .btn[disabled] {
+            background: #e9ecef;
+            color: #868e96 !important
+        }
+        h3 {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #495057;
+            padding-bottom: 8px
+        }
+        label {
+            color: #868e96
+        }
+        input[type="text"] {
+            border-radius: 4px;
+            border: none;
+            background: #e9ecef;
+            color: #212529 !important
+        }
+        .panel {
+            border-radius: 4px;
+            border-color: #dee2e6;
+            box-shadow: 0 16px 32px -4px #dee2e6;
+            border-bottom-width: 1px;
+        }
+        .panel-heading {
+            padding-top: 4px;
+        }
+        .panel-footer {
+            border-bottom-right-radius: 4px;
+            border-bottom-left-radius: 4px;
+            color: #212529 !important;
+            background: #FCF7E9 !important;
+            border-top: none
+        }
+        .panel-primary .panel-heading {
+            background: #FCF7E9 !important;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            border-left: 1px solid #dee2e6 !important;
+            border-top: 1px solid #dee2e6 !important;
+            border-right: 1px solid #dee2e6 !important;
+            color: #212529 !important
+        }
+        .help-block {
+            padding: 16px;
+            border-radius: 4px;
+            background: #f1f3f5;
+            color: #495057
+        }
+        .humane {
+            background: #ffa94d;
+            text-align: left;
+            color: #212529;
+            box-shadow: 0 32px 64px -8px #ffe8cc
+        }
 </style>
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <section id='order_form' class="container">
