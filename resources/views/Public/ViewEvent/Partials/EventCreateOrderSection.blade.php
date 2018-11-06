@@ -346,7 +346,7 @@
                     repeatCount="indefinite"/>
                   </path>
                 </svg>
-                <p style="color: white; font-size: 20px;">Do not close this page</p>
+                <p style="color: white; font-size: 20px; padding-top: 80px;">Do not close this page. Processing ticket...</p>
               </div>
         </div>
     </div>
