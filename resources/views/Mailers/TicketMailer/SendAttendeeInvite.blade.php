@@ -3,20 +3,20 @@
 @section('message_content')
 Hello,<br><br>
 
-Your order for the event <b>{{$attendee->$order->event->title}}</b> was successful.<br><br>
+Your order for the event <b>{{$attendee->order->event->title}}</b> was successful.<br><br>
 
-Your tickets are attached to this email. You can also view you order details and download your tickets at: {{route('showOrderDetails', ['order_reference' => $attendee->$order->order_reference])}}
+Your tickets are attached to this email. You can also view you order details and download your tickets at: {{route('showOrderDetails', ['order_reference' => $attendee->order->order_reference])}}
 
-@if(!$attendee->$order->is_payment_received)
+@if(!$attendee->order->is_payment_received)
 <br><br>
-<b>Please note: This order still requires payment. Instructions on how to make payment can be found on your order page: {{route('showOrderDetails', ['order_reference' => $attendee->$order->order_reference])}}</b>
+<b>Please note: This order still requires payment. Instructions on how to make payment can be found on your order page: {{route('showOrderDetails', ['order_reference' => $attendee->order->order_reference])}}</b>
 <br><br>
 @endif
 <h3>Order Details</h3>
-Order Reference: <b>{{$attendee->$order->order_reference}}</b><br>
-Order Name: <b>{{$attendee->$order->full_name}}</b><br>
-Order Date: <b>{{$attendee->$order->created_at->toDayDateTimeString()}}</b><br>
-Order Email: <b>{{$attendee->$order->email}}</b><br>
+Order Reference: <b>{{$attendee->order->order_reference}}</b><br>
+Order Name: <b>{{$attendee->order->full_name}}</b><br>
+Order Date: <b>{{$attendee->order->created_at->toDayDateTimeString()}}</b><br>
+Order Email: <b>{{$attendee->order->email}}</b><br>
 <h3>Order Items</h3>
 <div style="padding:10px; background: #F9F9F9; border: 1px solid #f1f1f1;">
     <table style="width:100%; margin:10px;">
@@ -37,7 +37,7 @@ Order Email: <b>{{$attendee->$order->email}}</b><br>
                 <b>Total</b>
             </td>
         </tr>
-        @foreach($attendee->$order->orderItems as $order_item)
+        @foreach($attendee->order->orderItems as $order_item)
                                 <tr>
                                     <td>
                                         {{$order_item->title}}
@@ -49,7 +49,7 @@ Order Email: <b>{{$attendee->$order->email}}</b><br>
                                         @if((int)ceil($order_item->unit_price) == 0)
                                         FREE
                                         @else
-                                       {{money($order_item->unit_price, $attendee->$order->event->currency)}}
+                                       {{money($order_item->unit_price, $attendee->order->event->currency)}}
                                         @endif
 
                                     </td>
@@ -57,7 +57,7 @@ Order Email: <b>{{$attendee->$order->email}}</b><br>
                                         @if((int)ceil($order_item->unit_price) == 0)
                                         -
                                         @else
-                                        {{money($order_item->unit_booking_fee, $attendee->$order->event->currency)}}
+                                        {{money($order_item->unit_booking_fee, $attendee->order->event->currency)}}
                                         @endif
 
                                     </td>
@@ -65,7 +65,7 @@ Order Email: <b>{{$attendee->$order->email}}</b><br>
                                         @if((int)ceil($order_item->unit_price) == 0)
                                         FREE
                                         @else
-                                        {{money(($order_item->unit_price + $order_item->unit_booking_fee) * ($order_item->quantity), $attendee->$order->event->currency)}}
+                                        {{money(($order_item->unit_price + $order_item->unit_booking_fee) * ($order_item->quantity), $attendee->order->event->currency)}}
                                         @endif
 
                                     </td>
@@ -82,7 +82,7 @@ Order Email: <b>{{$attendee->$order->email}}</b><br>
                 <b>Sub Total</b>
             </td>
             <td colspan="2">
-               {{money($attendee->$order->amount + $attendee->$order->order_fee, $attendee->$order->event->currency)}}
+               {{money($attendee->order->amount + $attendee->order->order_fee, $attendee->order->event->currency)}}
             </td>
         </tr>
     </table>
