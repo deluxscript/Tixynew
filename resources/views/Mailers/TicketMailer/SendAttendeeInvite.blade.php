@@ -204,9 +204,9 @@
                                         </td>
                                     </tr>
                                 </th>
-                                {{ dd($attendee->order->orderItems) }}
-                                @foreach($attendee->order->orderItems as $order_item)
                                 
+                                @foreach($attendee->order->orderItems as $order_item)
+                                {{ dd($order_item) }}
                                 <tr>
                                     <td>
                                         <div class="message">
