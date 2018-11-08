@@ -4,6 +4,7 @@ namespace App\Mailers;
 
 use App\Models\Attendee;
 use App\Models\Message;
+use App\Models\Order;
 use Carbon\Carbon;
 use Log;
 use Mail;
@@ -79,7 +80,9 @@ class AttendeeMailer extends Mailer
 
         $data = [
             'attendee' => $attendee,
+            'order' => $order,
         ];
+
 
         Mail::queue('Mailers.TicketMailer.SendAttendeeInvite', $data, function ($message) use ($attendee) {
             $message->to($attendee->email);
