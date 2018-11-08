@@ -38,7 +38,7 @@ Order Email: <b>{{$attendee->order->email}}</b><br>
             </td>
         </tr>
         @foreach($attendee->order->orderItems as $order_item)
-        {{dd($order_item); }}
+        {{dd($order_item) }}
                                 <tr>
                                     <td>
                                         <div class="message">
