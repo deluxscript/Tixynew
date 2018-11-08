@@ -38,36 +38,50 @@ Order Email: <b>{{$attendee->order->email}}</b><br>
             </td>
         </tr>
         @foreach($attendee->order->orderItems as $order_item)
+        <? dd($order_item); ?>
                                 <tr>
                                     <td>
-                                        {{$order_item->title}}
+                                        <div class="message">
+                                            <span class="header order-item">{{$order_item->title}}</span>
+                                        </div>
                                     </td>
                                     <td>
-                                        {{$order_item->quantity}}
+                                        <div class="message">
+                                            <span class="header order-detail">{{$order_item->quantity}}</span>
+                                        </div>
                                     </td>
                                     <td>
-                                        @if((int)ceil($order_item->unit_price) == 0)
-                                        FREE
-                                        @else
-                                       {{money($order_item->unit_price, $attendee->order->event->currency)}}
-                                        @endif
-
+                                        <div class="message">
+                                            <span class="header order-detail">
+                                            	@if((int)ceil($order_item->unit_price) == 0)
+		                                        FREE
+		                                        @else
+		                                       {{money($order_item->unit_price, $attendee->order->event->currency)}}
+		                                        @endif
+                                    		</span>
+                                        </div>
                                     </td>
                                     <td>
-                                        @if((int)ceil($order_item->unit_price) == 0)
+                                        <div class="message">
+                                            <span class="header order-detail">
+                                            	@if((int)ceil($order_item->unit_price) == 0)
                                         -
                                         @else
                                         {{money($order_item->unit_booking_fee, $attendee->order->event->currency)}}
                                         @endif
-
+                                            </span>
+                                        </div>
                                     </td>
                                     <td>
-                                        @if((int)ceil($order_item->unit_price) == 0)
+                                        <div class="message">
+                                            <span class="header order-detail">
+                                            	@if((int)ceil($order_item->unit_price) == 0)
                                         FREE
                                         @else
                                         {{money(($order_item->unit_price + $order_item->unit_booking_fee) * ($order_item->quantity), $attendee->order->event->currency)}}
                                         @endif
-
+                                            </span>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach
