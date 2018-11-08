@@ -131,7 +131,8 @@ class EventAttendeesController extends MyBaseController
         }
 
         $ticket_id = $request->get('ticket_id');
-        $ticket_price = 0;
+        $ticket = Ticket::find($ticket_id);
+        $ticket_price = $ticket->price;
         $attendee_first_name = $request->get('first_name');
         $attendee_last_name = $request->get('last_name');
         $attendee_email = $request->get('email');
