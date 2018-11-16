@@ -30,8 +30,8 @@
                 top: 0px;
             }
 
-            .attendee_details {
-                font-size: 10px;
+            .attendee_details, .event_details {
+                font-size: 12px;
             }
 
 
