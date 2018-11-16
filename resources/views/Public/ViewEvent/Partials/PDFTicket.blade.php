@@ -30,6 +30,10 @@
                 top: 0px;
             }
 
+            .attendee_details {
+                font-size: 10px;
+            }
+
 
             .ticket {
                 border: 1px solid {{$event->ticket_border_color}} !important;
