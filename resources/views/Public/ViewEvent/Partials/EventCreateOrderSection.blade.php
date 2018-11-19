@@ -107,7 +107,7 @@
         }
         .humane {
             background: #ffa94d;
-            text-align: left;
+            text-align: center;
             color: #212529;
             box-shadow: 0 32px 64px -8px #ffe8cc
         }
