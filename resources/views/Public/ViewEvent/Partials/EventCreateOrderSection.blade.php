@@ -328,7 +328,7 @@
                 @endif
 
             {!! Form::hidden('is_embedded', $is_embedded) !!}
-            {!! Form::submit('Checkout', ['disabled', 'title' => 'Answer all fields', 'class' => 'btn btn-lg btn-success card-submit', 'style' => 'width:100%;', 'id' => 'paystacksubmit']) !!}
+            {!! Form::submit('Checkout', ['class' => 'btn btn-lg btn-success card-submit', 'style' => 'width:100%;', 'id' => 'paystacksubmit']) !!}
 
             </div>
         </div>
@@ -351,13 +351,13 @@
         </div>
     </div>
 </section>
-<script>
+{{-- <script>
     var toHide = document.getElementsByClassName('survey_question');
     console.log(toHide);
     if (toHide < 1 || toHide = null) {
         document.getElementById("paystacksubmit").disabled = false;
     }
-</script>
+</script> --}}
 @if(session()->get('message'))
     <script>showMessage('{{session()->get('message')}}');</script>
 @endif
