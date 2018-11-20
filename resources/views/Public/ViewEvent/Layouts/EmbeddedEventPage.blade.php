@@ -18,6 +18,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
         <meta name="csrf-token" content="{{ csrf_token() }}" />
         <link rel="canonical" href="{{$event->event_url}}" />
+        <link rel="shortcut icon" href="{{ asset('assets/images/touch/favicon.ico')  }}">
         
 
         <!-- Open Graph data -->
@@ -29,6 +30,7 @@
         @endif
         <meta property="og:description" content="{{{Str::words(strip_tags($event->description)), 20}}}" />
         <meta property="og:site_name" content="Attendize.com" />
+
 
         <!--[if lt IE 9]>
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
