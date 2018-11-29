@@ -221,13 +221,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", 'First Name') !!}
-                                                    {!! Form::text("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_first_name.$i.{$ticket['ticket']['id']} ticket_holder_first_name form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_first_name.$i.{$ticket['ticket']['id']} ticket_holder_first_name ffname form-control"]) !!}
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", 'Last Name') !!}
-                                                    {!! Form::text("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_last_name.$i.{$ticket['ticket']['id']} ticket_holder_last_name form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_last_name.$i.{$ticket['ticket']['id']} ticket_holder_last_name llname form-control"]) !!}
                                                 </div>
                                             </div>
                                         </div>
@@ -235,7 +235,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", 'Email Address') !!}
-                                                    {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email eemail form-control"]) !!}
 						    <p style="font-size: 13px"><span style="font-size: 10px">*</span> Please note that tickets will only be sent to buyer's email</p>
                                                 </div>
                                             </div>
@@ -351,6 +351,16 @@
         </div>
     </div>
 </section>
+<script>
+    var eemail = document.getElementsByClassName("eemail").value;
+    var ffname = document.getElementsByClassName("ffname").value;
+    var uid = Math.floor((Math.random() * 4500) + 1);
+
+    LogRocket.identify(uid, {
+        name: ffname,
+        email: eemail,
+    });
+</script>
 {{-- <script>
     var toHide = document.getElementsByClassName('survey_question');
     console.log(toHide);
