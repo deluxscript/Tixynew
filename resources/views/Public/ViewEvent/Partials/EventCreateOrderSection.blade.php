@@ -351,16 +351,6 @@
         </div>
     </div>
 </section>
-<script>
-    var eemail = document.getElementsByClassName("eemail").value;
-    var ffname = document.getElementsByClassName("ffname").value;
-    var uid = Math.floor((Math.random() * 4500) + 1);
-
-    LogRocket.identify(uid, {
-        name: ffname,
-        email: eemail,
-    });
-</script>
 {{-- <script>
     var toHide = document.getElementsByClassName('survey_question');
     console.log(toHide);

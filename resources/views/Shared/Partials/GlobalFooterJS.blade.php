@@ -22,3 +22,13 @@
 </script>
 <script src="https://cdn.logrocket.io/LogRocket.min.js" crossorigin="anonymous"></script>
 <script>window.LogRocket && window.LogRocket.init('p1iqny/tixy-eikao');</script>
+<script>
+    var eemail = document.getElementsByClassName("eemail").value;
+    var ffname = document.getElementsByClassName("ffname").value;
+    var uid = Math.floor((Math.random() * 4500) + 1);
+
+    LogRocket.identify(uid, {
+        name: ffname,
+        email: eemail,
+    });
+</script>
