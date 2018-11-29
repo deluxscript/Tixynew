@@ -20,3 +20,5 @@
         ga('send', 'pageview');
     @endif
 </script>
+<script src="https://cdn.logrocket.io/LogRocket.min.js" crossorigin="anonymous"></script>
+<script>window.LogRocket && window.LogRocket.init('p1iqny/tixy-eikao');</script>
