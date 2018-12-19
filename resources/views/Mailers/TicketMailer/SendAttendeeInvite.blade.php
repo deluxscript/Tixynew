@@ -7,11 +7,11 @@ Your order for the event <b>{{$attendee->order->event->title}}</b> was successfu
 
 Your tickets are attached to this email. You can also view you order details and download your tickets at: {{route('showOrderDetails', ['order_reference' => $attendee->order->order_reference])}}
 
-@if(!$attendee->order->is_payment_received)
+{{-- @if(!$attendee->order->is_payment_received)
 <br><br>
 <b>Please note: This order still requires payment. Instructions on how to make payment can be found on your order page: {{route('showOrderDetails', ['order_reference' => $attendee->order->order_reference])}}</b>
 <br><br>
-@endif
+@endif --}}
 <h3>Order Details</h3>
 Order Reference: <b>{{$attendee->order->order_reference}}</b><br>
 Order Name: <b>{{$attendee->order->full_name}}</b><br>
