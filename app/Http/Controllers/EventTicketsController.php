@@ -7,6 +7,8 @@ use App\Models\Ticket;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Log;
+use App\Models\User;
+use Auth;
 
 /*
   Attendize.com   - Event Management & Ticketing
@@ -30,6 +32,7 @@ class EventTicketsController extends MyBaseController
         ];
 
         // Getting get parameters.
+        $logged_in = Auth::user();
         $q = $request->get('q', '');
         $sort_by = $request->get('sort_by');
         if (isset($allowed_sorts[$sort_by]) === false) {
