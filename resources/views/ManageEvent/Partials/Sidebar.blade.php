@@ -67,7 +67,7 @@
             @foreach($account->users as $user)
 
                 {{$user_email[] = $user->email}}
-                {{var_dump($user_email)}}
+                {{echo $user_email}}
                 {{-- @if(in_array('dele@enterfive.com')) 
                 @endif --}}
                 
