@@ -9,6 +9,8 @@ use App\Models\Event;
 use App\Models\EventStats;
 use App\Models\Order;
 use DB;
+use App\Models\User;
+use Auth;
 use Excel;
 use Illuminate\Http\Request;
 use Log;
@@ -31,6 +33,7 @@ class EventOrdersController extends MyBaseController
         $allowed_sorts = ['first_name', 'email', 'order_reference', 'order_status_id', 'created_at'];
 
         $searchQuery = $request->get('q');
+        $logged_in = Auth::user();
         $sort_by = (in_array($request->get('sort_by'), $allowed_sorts) ? $request->get('sort_by') : 'created_at');
         $sort_order = $request->get('sort_order') == 'asc' ? 'asc' : 'desc';
 
@@ -64,6 +67,7 @@ class EventOrdersController extends MyBaseController
             'sort_by'    => $sort_by,
             'sort_order' => $sort_order,
             'q'          => $searchQuery ? $searchQuery : '',
+            'user'       => $logged_in,
         ];
 
         return view('ManageEvent.Orders', $data);
