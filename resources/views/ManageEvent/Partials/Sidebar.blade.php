@@ -67,9 +67,9 @@
             @foreach($account->users as $user)
 
                 {{$user_email[] = $user->email}}
-                {{echo $user_email}}
-                {{-- @if(in_array('dele@enterfive.com')) 
-                @endif --}}
+                @if(in_array('dele@enterfive.com', $user_email, TRUE))
+                    {{echo 'its ok'}}
+                @endif
                 
             @endforeach
             <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
