@@ -32,7 +32,7 @@ class EventTicketsController extends MyBaseController
         ];
 
         // Getting get parameters.
-        $logged_in = Auth::user();
+        $user = Auth::user();
         $q = $request->get('q', '');
         $sort_by = $request->get('sort_by');
         if (isset($allowed_sorts[$sort_by]) === false) {
@@ -51,7 +51,7 @@ class EventTicketsController extends MyBaseController
             : $event->tickets()->orderBy($sort_by, 'asc')->paginate();
 
         // Return view.
-        return view('ManageEvent.Tickets', compact('event', 'tickets', 'sort_by', 'q', 'allowed_sorts'));
+        return view('ManageEvent.Tickets', compact('event', 'user', 'tickets', 'sort_by', 'q', 'allowed_sorts'));
     }
 
     /**
