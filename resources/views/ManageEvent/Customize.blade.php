@@ -195,14 +195,17 @@
 
                 <li data-route="{{route('showEventCustomizeTab', ['event_id' => $event->id, 'tab' => 'social'])}}"
                     class="{{$tab == 'social' ? 'active' : ''}}"><a href="#social" data-toggle="tab">Social</a></li>
-                <li data-route="{{route('showEventCustomizeTab', ['event_id' => $event->id, 'tab' => 'affiliates'])}}"
-                    class="{{$tab == 'affiliates' ? 'active' : ''}}"><a href="#affiliates"
-                                                                        data-toggle="tab">Affiliates</a></li>
-                <li data-route="{{route('showEventCustomizeTab', ['event_id' => $event->id, 'tab' => 'fees'])}}"
-                    class="{{$tab == 'fees' ? 'active' : ''}}"><a href="#fees" data-toggle="tab">Service Fees</a></li>
-                <li data-route="{{route('showEventCustomizeTab', ['event_id' => $event->id, 'tab' => 'ticket_design'])}}"
-                    class="{{$tab == 'ticket_design' ? 'active' : ''}}"><a href="#ticket_design" data-toggle="tab">Ticket
-                        Design</a></li>
+                
+                @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
+                    <li data-route="{{route('showEventCustomizeTab', ['event_id' => $event->id, 'tab' => 'affiliates'])}}"
+                        class="{{$tab == 'affiliates' ? 'active' : ''}}"><a href="#affiliates"
+                                                                            data-toggle="tab">Affiliates</a></li>
+                    <li data-route="{{route('showEventCustomizeTab', ['event_id' => $event->id, 'tab' => 'fees'])}}"
+                        class="{{$tab == 'fees' ? 'active' : ''}}"><a href="#fees" data-toggle="tab">Service Fees</a></li>
+                    <li data-route="{{route('showEventCustomizeTab', ['event_id' => $event->id, 'tab' => 'ticket_design'])}}"
+                        class="{{$tab == 'ticket_design' ? 'active' : ''}}"><a href="#ticket_design" data-toggle="tab">Ticket
+                            Design</a></li>
+                @endif
 
             </ul>
             <!--/ tab -->
