@@ -65,7 +65,7 @@
         <div class="col-sm-3">
             <div class="stat-box">
                 <h3>{{ $event->stats->sum('views') }}</h3>
-                <span>Event Views</span>
+                <span>Eventss Views</span>
             </div>
         </div>
 
