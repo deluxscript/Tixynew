@@ -13,6 +13,7 @@ use App\Models\Message;
 use App\Models\Order;
 use App\Models\OrderItem;
 use App\Models\Ticket;
+use App\Models\User;
 use Auth;
 use Config;
 use DB;
@@ -38,6 +39,7 @@ class EventAttendeesController extends MyBaseController
         $allowed_sorts = ['first_name', 'email', 'ticket_id', 'order_reference'];
 
         $searchQuery = $request->get('q');
+        $logged_in = Auth::user();
         $sort_order = $request->get('sort_order') == 'asc' ? 'asc' : 'desc';
         $sort_by = (in_array($request->get('sort_by'), $allowed_sorts) ? $request->get('sort_by') : 'created_at');
 
@@ -71,6 +73,7 @@ class EventAttendeesController extends MyBaseController
             'sort_by'    => $sort_by,
             'sort_order' => $sort_order,
             'q'          => $searchQuery ? $searchQuery : '',
+            'user'       => $logged_in,
         ];
 
         return view('ManageEvent.Attendees', $data);
