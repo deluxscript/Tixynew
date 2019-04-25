@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\EventStats;
+use App\Models\Account;
 use Carbon\Carbon;
 use DateInterval;
 use DatePeriod;

@@ -50,6 +50,7 @@
         </ul>
         <h5 class="heading">Event Tools</h5>
         {{-- {{print_r($event->organiser->email)}} --}}
+        {{print_r($account)}}
         <ul id="nav_event" class="topmenu">
             <li class="{{ Request::is('*check_in*') ? 'active' : '' }}">
                 <a href="{{route('showChechIn', array('event_id' => $event->id))}}">
