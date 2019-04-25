@@ -50,7 +50,7 @@
         </ul>
         <h5 class="heading">Event Tools</h5>
         {{-- {{print_r($account->users)}} --}}
-        {{print_r($event)}}
+        {{print_r($event->organiser)}}
         {{-- @foreach($account->users as $user)
                                             <tr>
                                                 <td>
