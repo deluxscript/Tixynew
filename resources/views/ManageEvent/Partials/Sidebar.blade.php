@@ -65,22 +65,12 @@
                 </a>
             </li>
             {{print_r($user)}}
-            {{-- @foreach($account->users as $user)
-
-                <?php $user_email[] = $user->email; ?>
-                
-                
-            @endforeach
-            
-            @if(count(array_intersect($admin_users, $user_email)) == count($user_email)) --}}
-            {{-- @if(in_array('dele@enterfived.com', $user_email, TRUE)) --}}
-                <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
-                    <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
-                        <span class="figure"><i class="ico-code"></i></span>
-                        <span class="text">Widgets</span>
-                    </a>
-                </li>
-            {{-- @endif --}}
+            <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
+                <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
+                    <span class="figure"><i class="ico-code"></i></span>
+                    <span class="text">Widgets</span>
+                </a>
+            </li>
             
     </section>
 </aside>
