@@ -65,7 +65,7 @@
                 </a>
             </li>
             {{-- {{print_r($user->email)}} --}}
-            @if($user->email = 'ayodele@enterfive.com' || $user->email = 'kemdi@enterfive.com' || $user->email = 'dele@enterfive.com')
+            @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
             <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
                 <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
                     <span class="figure"><i class="ico-code"></i></span>
