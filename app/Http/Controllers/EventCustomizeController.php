@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use File;
+use App\Models\User;
+use Auth;
 use Illuminate\Http\Request;
 use Image;
 use Validator;
@@ -19,10 +21,12 @@ class EventCustomizeController extends MyBaseController
      */
     public function showCustomize($event_id = '', $tab = '')
     {
+        $logged_in = Auth::user();
         $data = $this->getEventViewData($event_id, [
             'available_bg_images'        => $this->getAvailableBackgroundImages(),
             'available_bg_images_thumbs' => $this->getAvailableBackgroundImagesThumbs(),
             'tab'                        => $tab,
+            'user'                       => $logged_in,
         ]);
 
         return view('ManageEvent.Customize', $data);
