@@ -70,7 +70,9 @@
                 
                 
             @endforeach
-            @if(in_array('dele@enterfived.com', $user_email, TRUE))
+            @if(count(array_intersect($user_email, $user_email)) == count($user_email))
+                // all of $target is in $haystack
+            {{-- @if(in_array('dele@enterfived.com', $user_email, TRUE)) --}}
                 <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
                     <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
                         <span class="figure"><i class="ico-code"></i></span>
