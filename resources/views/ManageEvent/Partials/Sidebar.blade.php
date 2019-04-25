@@ -66,7 +66,7 @@
             </li>
             @foreach($account->users as $user)
 
-                {{return $user_email[] = $user->email}}
+                <?php $user_email[] = $user->email; ?>
                 
                 
             @endforeach
