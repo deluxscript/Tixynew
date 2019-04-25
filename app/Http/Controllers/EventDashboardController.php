@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Auth;
 use App\Models\Event;
 use App\Models\EventStats;
-use App\Models\Account;
+use App\Models\User;
 use Carbon\Carbon;
 use DateInterval;
 use DatePeriod;
@@ -23,7 +23,7 @@ class EventDashboardController extends MyBaseController
     {
         $event = Event::scope()->findOrFail($event_id);
 
-        $account = Account::find(Auth::user()->account_id);
+        $logged_in = Auth::user();
 
         $num_days = 20;
 
@@ -87,7 +87,7 @@ class EventDashboardController extends MyBaseController
 
         $data = [
             'event'      => $event,
-            'account'    => $account,
+            'user'    => $logged_in,
             'chartData'  => json_encode($result),
             'ticketData' => json_encode($tickets_data),
         ];
