@@ -64,7 +64,7 @@
                     <span class="text">Surveys</span>
                 </a>
             </li>
-            {{print_r($user)}}
+            {{print_r($user->email)}}
             <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
                 <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
                     <span class="figure"><i class="ico-code"></i></span>
