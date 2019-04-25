@@ -8,6 +8,8 @@ use App\Models\Event;
 use App\Models\Question;
 use App\Models\QuestionAnswer;
 use App\Models\QuestionType;
+use App\Models\User;
+use Auth;
 use Excel;
 use Illuminate\Http\Request;
 use JavaScript;
@@ -28,6 +30,7 @@ class EventSurveyController extends MyBaseController
     public function showEventSurveys(Request $request, $event_id)
     {
         $event = Event::scope()->findOrFail($event_id);
+        $logged_in = Auth::user();
 
         JavaScript::put([
             'postUpdateQuestionsOrderRoute' => route('postUpdateQuestionsOrder', ['event_id' => $event_id]),
@@ -39,6 +42,7 @@ class EventSurveyController extends MyBaseController
             'sort_order' => 'asc',
             'sort_by'    => 'title',
             'q'          => '',
+            'user'       => $logged_in,
         ];
 
         return view('ManageEvent.Surveys', $data);
