@@ -65,15 +65,16 @@
                 </a>
             </li>
             @foreach($account->users as $user)
-                @if($user->email == 'dele@enterfive.com' || $user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'kemdi.ebi@gmail.com')
-
-                    <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
-                        <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
-                            <span class="figure"><i class="ico-code"></i></span>
-                            <span class="text">Widgets</span>
-                        </a>
-                    </li>
-                @endif
+                {{-- @if($user->email == 'dele@enterfive.com' || $user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'kemdi.ebi@gmail.com') 
+                @endif --}}
+                {{ return $user}}
             @endforeach
+            {{ print_r($user)}}
+            <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
+                <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
+                    <span class="figure"><i class="ico-code"></i></span>
+                    <span class="text">Widgets</span>
+                </a>
+            </li>
     </section>
 </aside>
