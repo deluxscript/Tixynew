@@ -67,11 +67,12 @@
             @foreach($account->users as $user)
 
                 {{$user_email[] = $user->email}}
-                @if(in_array('dele@enterfive.com', $user_email, TRUE))
-                    {{print_r('its ok')}}
-                @endif
+                
                 
             @endforeach
+            @if(in_array('dele@enterfive.com', $user_email, TRUE))
+                    {{print_r('its ok')}}
+                @endif
             <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
                 <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
                     <span class="figure"><i class="ico-code"></i></span>
