@@ -65,9 +65,12 @@
                 </a>
             </li>
             @foreach($account->users as $user)
-                {{-- @if($user->email == 'dele@enterfive.com' || $user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'kemdi.ebi@gmail.com') 
+
+                {{$user_email[] = $user->email}}
+                {{print_r($user_email)}}
+                {{-- @if(in_array('dele@enterfive.com')) 
                 @endif --}}
-                {{ var_dump($user->email)}}
+                
             @endforeach
             <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
                 <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
