@@ -71,7 +71,7 @@
                 
             @endforeach
             <?php $admin_users = array('ayodele@enterfive.com', 'kemdi@enterfive.com'); ?>
-            @if(count(array_intersect($user_email, $admin_users)) == count($admin_users))
+            @if(count(array_intersect($admin_users, $user_email)) == count($user_email))
             {{-- @if(in_array('dele@enterfived.com', $user_email, TRUE)) --}}
                 <li class="{{ Request::is('*widgets*') ? 'active' : '' }}">
                     <a href="{{route('showEventWidgets', array('event_id' => $event->id))}}">
