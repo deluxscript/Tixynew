@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Models\Event;
 use App\Models\EventStats;
 use App\Models\Account;
@@ -21,6 +22,8 @@ class EventDashboardController extends MyBaseController
     public function showDashboard($event_id = false)
     {
         $event = Event::scope()->findOrFail($event_id);
+
+        $account = Account::find(Auth::user()->account_id);
 
         $num_days = 20;
 
@@ -84,6 +87,7 @@ class EventDashboardController extends MyBaseController
 
         $data = [
             'event'      => $event,
+            'account'    => $account,
             'chartData'  => json_encode($result),
             'ticketData' => json_encode($tickets_data),
         ];
