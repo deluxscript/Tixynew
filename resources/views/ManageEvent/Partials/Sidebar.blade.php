@@ -64,7 +64,7 @@
                     <span class="text">Surveys</span>
                 </a>
             </li>
-            {{print_r($user;)}}
+            {{print_r($user)}}
             {{-- @foreach($account->users as $user)
 
                 <?php $user_email[] = $user->email; ?>
