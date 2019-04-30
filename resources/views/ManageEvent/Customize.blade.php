@@ -342,7 +342,7 @@
                 <div class="tab-pane scale_iframe {{$tab == 'design' ? 'active' : ''}}" id="design">
 
                     <div class="row">
-                        <div class="col-sm-6">
+                        {{-- <div class="col-sm-6">
 
                             {!! Form::open(array('url' => route('postEditEventDesign', ['event_id' => $event->id]), 'files'=> true, 'class' => 'ajax customizeForm')) !!}
 
@@ -411,8 +411,8 @@
 
                             {!! Form::close() !!}
 
-                        </div>
-                        <div class="col-sm-6">
+                        </div> --}}
+                        <div class="col-sm-12">
                             <h4>Event Page Preview</h4>
 
                             <div class="iframe_wrap" style="overflow:hidden; height: 600px; border: 1px solid #ccc;">
