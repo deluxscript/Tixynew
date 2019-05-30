@@ -35,7 +35,6 @@
                                         {{$organiser->name}}
                                     </a>
                                 @endif
-                            @endif
                             @elseif($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
                                 <a href="{{route('showOrganiserDashboard',              ['organiser_id'=>$organiser->id] )}}"
                                 class="list-group-item">
