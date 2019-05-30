@@ -135,7 +135,7 @@
                                                         {{$user->email}}
                                                     </td>
                                                     <td>
-                                                        {!! $user->is_parent ? '<span class="label label-info">Account owner</span>' : '' !!}
+                                                        
                                                     </td>
 
                                                 </tr>
