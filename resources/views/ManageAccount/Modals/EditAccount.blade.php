@@ -106,18 +106,21 @@
 
                                         <tbody>
                                         @foreach($account->users as $user)
-                                            <tr>
-                                                <td>
-                                                    {{$user->first_name}} {{$user->last_name}}
-                                                </td>
-                                                <td>
-                                                    {{$user->email}}
-                                                </td>
-                                                <td>
-                                                    {!! $user->is_parent ? '<span class="label label-info">Account owner</span>' : '' !!}
-                                                </td>
+                                            @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
+                                                <tr>
+                                                    <td>
+                                                        {{$user->first_name}} {{$user->last_name}}
+                                                    </td>
+                                                    <td>
+                                                        {{$user->email}}
+                                                    </td>
+                                                    <td>
+                                                        {!! $user->is_parent ? '<span class="label label-info">Account owner</span>' : '' !!}
+                                                    </td>
 
-                                            </tr>
+                                                </tr>
+                                                @endif
+
                                         @endforeach
                                         <tr>
                                             <td colspan="3">
