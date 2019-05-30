@@ -19,10 +19,6 @@ class OrganiserController extends MyBaseController
     public function showSelectOrganiser()
     {   
         $logged_in = Auth::user();
-
-        // if (!$organiser->enable_organiser_page && !Utils::userOwns($organiser)) {
-        //     abort(404);
-        // }
         
         $data = [
             'user'       => $logged_in
@@ -38,7 +34,14 @@ class OrganiserController extends MyBaseController
      */
     public function showCreateOrganiser()
     {
-        return view('ManageOrganiser.CreateOrganiser');
+
+        $logged_in = Auth::user();
+        
+        $data = [
+            'user'       => $logged_in
+        ];
+
+        return view('ManageOrganiser.CreateOrganiser', $data);
     }
 
     /**
