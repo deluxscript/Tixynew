@@ -40,6 +40,12 @@ $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 
     $api->get('order/{id}', 'OrdersApiController@show');
 });
 
+//Show Organisers info.
+$api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 'cors'], function ($api) {
+    $api->get('organiser', 'OrganisersApiController@index');
+    $api->get('organiser/{id}', 'OrganisersApiController@show');
+});
+
 
 
  Route::group(['prefix' => 'api', 'middleware' => 'auth:api'], function () {
