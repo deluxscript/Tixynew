@@ -37,9 +37,6 @@
                     
                     <div class="list-group">
                         @foreach($organisers as $organiser)
-                        <p>UserEmail - {{$user->email}}</p>
-                        <p>OrganiserEmail - {{$organiser->email}}</p>
-
                         @if($user->email == $organiser->email)
                             <a href="{{route('showOrganiserDashboard', ['organiser_id'=>$organiser->id] )}}"
                                class="list-group-item">
