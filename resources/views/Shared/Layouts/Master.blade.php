@@ -641,8 +641,9 @@ a.show-more-options {
 
                         </li>
                     @endforeach
-                    @endif
                     <li class="divider"></li>
+
+                    @endif
 
                     <li>
                         <a data-href="{{route('showEditUser')}}" data-modal-id="EditUser"
