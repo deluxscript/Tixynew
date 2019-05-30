@@ -8,6 +8,9 @@ use Image;
 use Illuminate\Http\Request;
 use Validator;
 
+use App\Models\User;
+use Auth;
+
 class OrganiserCustomizeController extends MyBaseController
 {
     /**
@@ -18,8 +21,11 @@ class OrganiserCustomizeController extends MyBaseController
      */
     public function showCustomize($organiser_id)
     {
+        $logged_in = Auth::user();
+
         $data = [
             'organiser' => Organiser::scope()->findOrFail($organiser_id),
+            'user'       => $logged_in,
         ];
 
         return view('ManageOrganiser.Customize', $data);
