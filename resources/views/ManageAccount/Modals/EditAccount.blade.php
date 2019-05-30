@@ -31,13 +31,13 @@
                         <!-- tab -->
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#general_account" data-toggle="tab">General</a></li>
-                            <li><a href="#payment_account" data-toggle="tab">Payment</a></li>
+                            {{-- <li><a href="#payment_account" data-toggle="tab">Payment</a></li> --}}
                             <li><a href="#users_account" data-toggle="tab">Users</a></li>
                             <li><a href="#about" data-toggle="tab">About</a></li>
                         </ul>
                         <div class="tab-content panel">
                             <div class="tab-pane active" id="general_account">
-                                {!! Form::model($account, array('url' => route('postEditAccount'), 'class' => 'ajax ')) !!}
+                                {!! Form::model($user, array('url' => route('postEditUser'), 'class' => 'ajax ')) !!}
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -93,11 +93,11 @@
 
                                 {!! Form::close() !!}
                             </div>
-                            <div class="tab-pane " id="payment_account">
+                            {{-- <div class="tab-pane " id="payment_account">
 
                                @include('ManageAccount.Partials.PaymentGatewayOptions')
 
-                            </div>
+                            </div> --}}
                             <div class="tab-pane" id="users_account">
                                 {!! Form::open(array('url' => route('postInviteUser'), 'class' => 'ajax ')) !!}
 
