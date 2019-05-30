@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Auth;
+
 use App\Models\Event;
 use App\Models\Organiser;
 use Illuminate\Http\Request;
@@ -21,6 +24,8 @@ class OrganiserEventsController extends MyBaseController
 
         $allowed_sorts = ['created_at', 'start_date', 'end_date', 'title'];
 
+        $logged_in = Auth::user();
+
         $searchQuery = $request->get('q');
         $sort_by = (in_array($request->get('sort_by'), $allowed_sorts) ? $request->get('sort_by') : 'start_date');
 
@@ -37,6 +42,7 @@ class OrganiserEventsController extends MyBaseController
                 'sort_by'  => $request->get('sort_by') ? $request->get('sort_by') : '',
                 'showPast' => $request->get('past'),
             ],
+            'user'       => $logged_in,
         ];
 
         return view('ManageOrganiser.Events', $data);
