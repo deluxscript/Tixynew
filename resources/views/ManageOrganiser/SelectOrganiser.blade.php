@@ -24,19 +24,18 @@
                     </div>
 
                     <h5>Continue to:</h5>
-                    @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
+                   
+                    
                     <div class="list-group">
                         @foreach($organisers as $organiser)
-                            <a href="{{route('showOrganiserDashboard', ['organiser_id'=>$organiser->id] )}}"
-                               class="list-group-item">
-                                {{$organiser->name}}
-                            </a>
+                            @if($user->email != 'ayodele@enterfive.com' || $user->email != 'kemdi@enterfive.com' || $user->email != 'dele@enterfive.com' && $user->email == $organiser->email)
+                                <a href="{{route('showOrganiserDashboard', ['organiser_id'=>$organiser->id] )}}"
+                                class="list-group-item">
+                                    {{$organiser->name}}
+                                </a>
+                            @endif
                         @endforeach
                     </div>
-                    @endif
-
-                    
-                    
 
                     <div style="margin-top:-15px; padding: 10px; text-align: center;">
                         OR
