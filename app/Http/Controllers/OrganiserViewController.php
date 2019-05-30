@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Attendize\Utils;
 use App\Models\Organiser;
+use App\Models\User;
 use Auth;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -21,6 +22,7 @@ class OrganiserViewController extends Controller
     public function showOrganiserHome(Request $request, $organiser_id, $slug = '', $preview = false)
     {
         $organiser = Organiser::findOrFail($organiser_id);
+        $logged_in = Auth::user();
 
         if (!$organiser->enable_organiser_page && !Utils::userOwns($organiser)) {
             abort(404);
@@ -47,6 +49,7 @@ class OrganiserViewController extends Controller
             'is_embedded'     => 0,
             'upcoming_events' => $upcoming_events,
             'past_events'     => $past_events,
+            'user'       => $logged_in
         ];
 
         return view('Public.ViewOrganiser.OrganiserPage', $data);
