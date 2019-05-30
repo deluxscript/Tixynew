@@ -105,23 +105,24 @@
                                     <table class="table table-bordered">
 
                                         <tbody>
-                                        @foreach($account->users as $user)
-                                            @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
-                                                <tr>
-                                                    <td>
-                                                        {{$user->first_name}} {{$user->last_name}}
-                                                    </td>
-                                                    <td>
-                                                        {{$user->email}}
-                                                    </td>
-                                                    <td>
-                                                        {!! $user->is_parent ? '<span class="label label-info">Account owner</span>' : '' !!}
-                                                    </td>
 
-                                                </tr>
-                                                @endif
+                                        @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
+                                            @foreach($account->users as $user)
+                                                    <tr>
+                                                        <td>
+                                                            {{$user->first_name}} {{$user->last_name}}
+                                                        </td>
+                                                        <td>
+                                                            {{$user->email}}
+                                                        </td>
+                                                        <td>
+                                                            {!! $user->is_parent ? '<span class="label label-info">Account owner</span>' : '' !!}
+                                                        </td>
 
-                                        @endforeach
+                                                    </tr>
+
+                                            @endforeach
+                                        @endif
                                         <tr>
                                             <td colspan="3">
                                                 <div class="input-group">
