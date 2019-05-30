@@ -29,10 +29,12 @@
                     <div class="list-group">
                         @foreach($organisers as $organiser)
                             @if($user->email != 'ayodele@enterfive.com' || $user->email != 'kemdi@enterfive.com' || $user->email != 'dele@enterfive.com')
-                                <a href="{{route('showOrganiserDashboard', ['organiser_id'=>$organiser->id] )}}"
-                                class="list-group-item">
-                                    {{$organiser->name}}
-                                </a>
+                                @if($user->email == $organiser->email)
+                                    <a href="{{route('showOrganiserDashboard', ['organiser_id'=>$organiser->id] )}}"
+                                    class="list-group-item">
+                                        {{$organiser->name}}
+                                    </a>
+                                @endif
                             @endif
                         @endforeach
                     </div>
