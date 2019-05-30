@@ -34,14 +34,7 @@ class OrganiserController extends MyBaseController
      */
     public function showCreateOrganiser()
     {
-
-        $logged_in = Auth::user();
-        
-        $data = [
-            'user'       => $logged_in
-        ];
-
-        return view('ManageOrganiser.CreateOrganiser', $data);
+        return view('ManageOrganiser.CreateOrganiser');
     }
 
     /**

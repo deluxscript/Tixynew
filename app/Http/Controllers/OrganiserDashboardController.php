@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Auth;
+
 use App\Models\Organiser;
 use Carbon\Carbon;
 
@@ -18,6 +21,8 @@ class OrganiserDashboardController extends MyBaseController
         $organiser = Organiser::scope()->findOrFail($organiser_id);
         $upcoming_events = $organiser->events()->where('end_date', '>=', Carbon::now())->get();
         $calendar_events = [];
+
+        $logged_in = Auth::user();
 
         /* Prepare JSON array for events for use in the dashboard calendar */
         foreach ($organiser->events as $event) {
@@ -36,6 +41,7 @@ class OrganiserDashboardController extends MyBaseController
             'organiser'       => $organiser,
             'upcoming_events' => $upcoming_events,
             'calendar_events' => json_encode($calendar_events),
+            'user'       => $logged_in,
         ];
 
         return view('ManageOrganiser.Dashboard', $data);
