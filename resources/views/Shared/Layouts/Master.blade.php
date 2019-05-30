@@ -625,6 +625,7 @@ a.show-more-options {
 
 
                 <ul class="dropdown-menu" role="menu">
+                    @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
                     <li>
                         <a href="{{route('showCreateOrganiser')}}">
                             <i class="ico ico-plus"></i>
@@ -640,6 +641,7 @@ a.show-more-options {
 
                         </li>
                     @endforeach
+                    @endif
                     <li class="divider"></li>
 
                     <li>
