@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Auth;
+
 use App\Models\Organiser;
 use Illuminate\Http\Request;
 use Image;
@@ -15,7 +18,13 @@ class OrganiserController extends MyBaseController
      */
     public function showSelectOrganiser()
     {
-        return view('ManageOrganiser.SelectOrganiser');
+        $logged_in = Auth::user();
+
+        $data = [
+            'user'       => $logged_in
+        ];
+
+        return view('ManageOrganiser.SelectOrganiser', $data);
     }
 
     /**
