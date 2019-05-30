@@ -16,7 +16,7 @@ class OrganiserController extends MyBaseController
      *
      * @return \Illuminate\Contracts\View\View
      */
-    public function showSelectOrganiser()
+    public function showSelectOrganiser(Request $organiser_id)
     {   
         $organiser = Organiser::findOrFail($organiser_id);
         $logged_in = Auth::user();
