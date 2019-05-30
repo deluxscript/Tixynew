@@ -35,6 +35,12 @@
                                 </a>
                             @endforeach
                         </div>
+                        
+
+                        <div style="margin-top:-15px; padding: 10px; text-align: center;">
+                            OR
+                        </div>
+                        <a style="color: white;" href="{{route('showCreateOrganiser')}}" class="btn btn-block btn-success">Create New Organiser</a>
                     
                     @else
                         <div class="list-group">
@@ -50,11 +56,6 @@
                             @endforeach
                         </div>
                     @endif
-
-                    <div style="margin-top:-15px; padding: 10px; text-align: center;">
-                        OR
-                    </div>
-                    <a style="color: white;" href="{{route('showCreateOrganiser')}}" class="btn btn-block btn-success">Create New Organiser</a>
                 </div>
             </div>
         </div>
