@@ -123,6 +123,26 @@
 
                                             @endforeach
                                         @endif
+
+                                        @if($user->email != 'ayodele@enterfive.com' || $user->email != 'kemdi@enterfive.com' || $user->email != 'dele@enterfive.com')
+                                            @if($user->is_parent == 0)
+                                                @foreach($account->users as $user)
+                                                <tr>
+                                                    <td>
+                                                        {{$user->first_name}} {{$user->last_name}}
+                                                    </td>
+                                                    <td>
+                                                        {{$user->email}}
+                                                    </td>
+                                                    <td>
+                                                        {!! $user->is_parent ? '<span class="label label-info">Account owner</span>' : '' !!}
+                                                    </td>
+
+                                                </tr>
+
+                                                @endforeach
+                                            @endif
+                                        @endif
                                         <tr>
                                             <td colspan="3">
                                                 <div class="input-group">
