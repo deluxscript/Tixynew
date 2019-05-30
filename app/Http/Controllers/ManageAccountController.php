@@ -27,7 +27,10 @@ class ManageAccountController extends MyBaseController
      */
     public function showEditAccount(Request $request)
     {
+        $logged_in = Auth::user();
+
         $data = [
+            'user'                     => $logged_in,
             'account'                  => Account::find(Auth::user()->account_id),
             'timezones'                => Timezone::lists('location', 'id'),
             'currencies'               => Currency::lists('title', 'id'),
