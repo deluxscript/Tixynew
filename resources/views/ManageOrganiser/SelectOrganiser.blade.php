@@ -34,7 +34,7 @@
                         @endforeach
                     </div>
                     @endif
-                <p>{{ $organiser  }}</p>
+                <p>{{ $organiser->name }}</p>
 
                     <div style="margin-top:-15px; padding: 10px; text-align: center;">
                         OR
