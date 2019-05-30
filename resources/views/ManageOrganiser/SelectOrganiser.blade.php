@@ -24,25 +24,32 @@
                     </div>
 
                     <h5>Continue to:</h5>
-                   
                     
-                    <div class="list-group">
-                        @foreach($organisers as $organiser)
-                            @if($user->email != 'ayodele@enterfive.com' || $user->email != 'kemdi@enterfive.com' || $user->email != 'dele@enterfive.com')
-                                @if($user->email == $organiser->email)
-                                    <a href="{{route('showOrganiserDashboard', ['organiser_id'=>$organiser->id] )}}"
-                                    class="list-group-item">
-                                        {{$organiser->name}}
-                                    </a>
-                                @endif
-                            @elseif($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
-                                <a href="{{route('showOrganiserDashboard',              ['organiser_id'=>$organiser->id] )}}"
+                    @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
+
+                        <div class="list-group">
+                            @foreach($organisers as $organiser)
+                                <a href="{{route('showOrganiserDashboard', ['organiser_id'=>$organiser->id] )}}"
                                 class="list-group-item">
                                     {{$organiser->name}}
                                 </a>
-                            @endif
-                        @endforeach
-                    </div>
+                            @endforeach
+                        </div>
+                    
+                    @else
+                        <div class="list-group">
+                            @foreach($organisers as $organiser)
+                                @if($user->email != 'ayodele@enterfive.com' || $user->email != 'kemdi@enterfive.com' || $user->email != 'dele@enterfive.com')
+                                    @if($user->email == $organiser->email)
+                                        <a href="{{route('showOrganiserDashboard', ['organiser_id'=>$organiser->id] )}}"
+                                        class="list-group-item">
+                                            {{$organiser->name}}
+                                        </a>
+                                    @endif
+                                @endif
+                            @endforeach
+                        </div>
+                    @endif
 
                     <div style="margin-top:-15px; padding: 10px; text-align: center;">
                         OR
