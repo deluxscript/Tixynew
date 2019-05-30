@@ -18,13 +18,13 @@ class OrganiserController extends MyBaseController
      */
     public function showSelectOrganiser()
     {   
-        $organiser = Organiser::findOrFail($organiser_id);
+        $organiser = Organiser::findOrFail();
         $logged_in = Auth::user();
 
         if (!$organiser->enable_organiser_page && !Utils::userOwns($organiser)) {
             abort(404);
         }
-        
+
         $data = [
             'organiser'       => $organiser,
             'user'       => $logged_in
