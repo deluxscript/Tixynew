@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Auth;
 
-use App\Models\Organiser;
 use Illuminate\Http\Request;
 use Image;
 
@@ -16,9 +15,8 @@ class OrganiserController extends MyBaseController
      *
      * @return \Illuminate\Contracts\View\View
      */
-    public function showSelectOrganiser(Request $organiser_id)
+    public function showSelectOrganiser()
     {   
-        $organiser = Organiser::findOrFail($organiser_id);
         $logged_in = Auth::user();
 
         // if (!$organiser->enable_organiser_page && !Utils::userOwns($organiser)) {
@@ -26,7 +24,6 @@ class OrganiserController extends MyBaseController
         // }
         
         $data = [
-            'organiser'       => $organiser,
             'user'       => $logged_in
         ];
 
