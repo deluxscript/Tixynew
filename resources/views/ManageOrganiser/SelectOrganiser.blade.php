@@ -34,7 +34,18 @@
                         @endforeach
                     </div>
                     @endif
-                <p>{{ $organisers }}</p>
+                    
+                    <div class="list-group">
+                        @foreach($organisers as $organiser)
+
+                        @if($user->email == $organiser->email)
+                            <a href="{{route('showOrganiserDashboard', ['organiser_id'=>$organiser->id] )}}"
+                               class="list-group-item">
+                                {{$organiser->name}}
+                            </a>
+                            @endif
+                        @endforeach
+                    </div>
 
                     <div style="margin-top:-15px; padding: 10px; text-align: center;">
                         OR
