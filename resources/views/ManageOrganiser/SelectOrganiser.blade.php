@@ -56,6 +56,7 @@
                             @endforeach
                         </div>
                     @endif
+                    <a style="color: white;" href="{{route('logout')}}" class="btn btn-block btn-success">Sign Out</a>
                 </div>
             </div>
         </div>
