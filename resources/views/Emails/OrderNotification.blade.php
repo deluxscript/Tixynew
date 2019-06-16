@@ -1,7 +1,7 @@
 @extends('Emails.Layouts.Master')
 
 @section('message_content')
-Hello,<br><br>
+Helloss,<br><br>
 
 You have received a new order for the event <b>{{$order->event->title}}</b>.<br><br>
 

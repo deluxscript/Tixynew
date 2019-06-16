@@ -1,7 +1,19 @@
 @extends('Emails.Layouts.Master')
 
 @section('message_content')
-
+<div class="main-content" style="box-sizing: border-box;">
+    <img
+      src="url({{asset('assets/images/default-banner.jpg')}})"
+      class=" va-middle border-left border-right border-top"
+      alt="thumbs up"
+      style="border-top-right-radius:4px;border-top-left-radius:4px;margin-bottom:-2px;z-index:100;width: 100%;box-sizing: border-box;"
+    />
+    <table class="box" cellpadding="0" cellspacing="0">
+      <tr>
+        <td>
+          <table cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="content">
                <!--  <div
                   class="rounded p-md mb-sm border border-green"
                 >
