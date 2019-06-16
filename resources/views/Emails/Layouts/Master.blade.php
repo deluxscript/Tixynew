@@ -2513,7 +2513,6 @@ Margins, paddings
 <body class="bg-body">
 
 <!-- body -->
-<center>
     <table class="main bg-body" width="100%" cellspacing="0" cellpadding="0">
       <tr>
         <td align="center" valign="top">
@@ -2604,6 +2603,5 @@ Margins, paddings
 </td>
 </tr>
 </table>
-</center>
 </body>
 </html>
