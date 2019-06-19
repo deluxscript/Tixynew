@@ -91,6 +91,7 @@
                     {!! csrf_field() !!}
 
                     {!! Form::open(array('url' => route('postInstaller'), 'class' => 'installer_form')) !!}
+                    {{ csrf_field() }}
 
                     <h3>App Settings</h3>
 
