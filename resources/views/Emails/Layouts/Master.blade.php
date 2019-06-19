@@ -2522,7 +2522,8 @@ Margins, paddings
               <tr>
                 <td align="center" valign="top" width="640">
           <![endif]-->
-          <span class="preheader">Your Ticket(s) for {{$order->event->title}}</span>
+          <span class="preheader">Your Ticket(s)</span>
+
           <table class="wrap" cellspacing="0" cellpadding="0">
             <tr>
               <td class="p-sm">
