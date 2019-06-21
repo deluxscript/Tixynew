@@ -31,8 +31,10 @@
                         <!-- tab -->
                         <ul class="nav nav-tabs">
                             <li class="active"><a href="#general_account" data-toggle="tab">General</a></li>
-                            <li><a href="#payment_account" data-toggle="tab">Payment</a></li>
-                            <li><a href="#users_account" data-toggle="tab">Users</a></li>
+                            @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
+                                <li><a href="#payment_account" data-toggle="tab">Payment</a></li>
+                                <li><a href="#users_account" data-toggle="tab">Users</a></li>
+                            @endif
                             <li><a href="#about" data-toggle="tab">About</a></li>
                         </ul>
                         <div class="tab-content panel">
@@ -93,12 +95,12 @@
 
                                 {!! Form::close() !!}
                             </div>
+                            @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
                             <div class="tab-pane " id="payment_account">
 
                                @include('ManageAccount.Partials.PaymentGatewayOptions')
 
                             </div>
-                            @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
                             <div class="tab-pane" id="users_account">
                                 {!! Form::open(array('url' => route('postInviteUser'), 'class' => 'ajax ')) !!}
 
