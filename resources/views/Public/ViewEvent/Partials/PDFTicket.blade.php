@@ -203,7 +203,7 @@ opacity: .64;
                           <table cellpadding="0" cellspacing="0" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; border-collapse: collapse; width: 100%;">
                             <tr>
                               <td class="content border-top" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif; border-top-width: 1px; border-top-color: #f0f0f0; border-top-style: solid; padding: 40px 48px;">
-                                <a href="https://tixy.ng/" style="color: #467fcf; text-decoration: none;"><img src="{{ vendorLogoLink }}" height="32" alt="" style="line-height: 100%; outline: none; text-decoration: none; vertical-align: baseline; font-size: 0; border: 0 none;" /></a>
+                                <a href="https://tixy.ng/" style="color: #467fcf; text-decoration: none;"><img src="{{asset('assets/images/default-banner.jpg')}}" height="32" alt="" style="line-height: 100%; outline: none; text-decoration: none; vertical-align: baseline; font-size: 0; border: 0 none;" /></a>
                                 <br />
                                 <br />
                                 <div class="barcode">
