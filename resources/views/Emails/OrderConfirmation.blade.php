@@ -116,7 +116,7 @@ Your tickets are attached to this email.<br />
                       class="text-right"
                       style="padding-right:12px"
                     >
-                      Price
+                      Pricee
                     </th>
                     <th colspan="2" class="text-right">
                       Total
