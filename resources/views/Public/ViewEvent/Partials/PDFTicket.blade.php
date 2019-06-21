@@ -66,7 +66,7 @@
                         </div>
 
                         <div class="event_details">
-                            <h4>Event</h4>
+                            <h4>Eventss</h4>
                             {{$event->title}}
                             <h4>Organiser</h4>
                             {{$event->organiser->name}}
