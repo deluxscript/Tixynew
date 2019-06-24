@@ -101,7 +101,7 @@ Your tickets are attached to this email.<br>
                 </table>
 
                 <p style="margin: 0 0 1em;">
-                  We have also sent tickets to each recipient.
+                    If you are purchasing tickets for others, please send their tickets to their respective emails.
                 </p>
               </td>
             </tr>
