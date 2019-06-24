@@ -24,6 +24,7 @@
                     </div>
 
                     <h5>Continue to:</h5>
+                    <br />
                     
                     @if($user->email == 'ayodele@enterfive.com' || $user->email == 'kemdi@enterfive.com' || $user->email == 'dele@enterfive.com')
 
