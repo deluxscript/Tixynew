@@ -52,7 +52,7 @@
         <tr>
           <td class="px-lg" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding-right: 24px;padding-left: 24px;">
             <a href="mailto:info@tixy.ng" class="text-muted" style="color: #9eb0b7;text-decoration: none;">
-              Event ticketing by Tixy
+              Event Ticketing by Tixy
             </a>
           </td>
         </tr>

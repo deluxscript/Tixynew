@@ -100,8 +100,8 @@ Your tickets are attached to this email.<br>
                   </tr>
                 </table>
 
-                <p style="margin: 0 0 1em;">
-                    If you are purchasing tickets for others, please send their tickets to their respective emails.
+                <p style="margin: 0 0 1em; padding-top: 15px; text-align: center">
+                    Please note: If you are purchasing tickets for others, you can send the tickets to their respective emails.
                 </p>
               </td>
             </tr>
