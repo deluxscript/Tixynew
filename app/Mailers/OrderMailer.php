@@ -31,8 +31,6 @@ class OrderMailer
         ];
 
         foreach ($order->orderItems as $order_item) {
-            # code...
-            var_dump($order_item->title);
         
 
         if($order_item->title == "Amina"){
