@@ -14,13 +14,17 @@
                 <p style="line-height: 1.5; font-size: 16px;"><b>Is that you Okwei?</b></p>
                 <p style="line-height: 1.5; font-size: 16px;">
                     Okwei of Osomari was a woman who was about her <b>business</b>, she traded everything from ivory, gold and silver to palm oil. She achieved so much that her people had to crown her Omu (Queen) Okwei. 
-                    <br />
+                <p/>
+                <p style="line-height: 1.5; font-size: 16px;">
                     You’re smart. You’re talented. You’re ready to upgrade your career, business and life to the next level. We see you Queen Okwei. 
-                    <br />
+                <p/>
+                <p style="line-height: 1.5; font-size: 16px;">
                     Here’s your one way ticket to living your best BOSS life at #SLAYFestival2019! Please don’t forget to save this ticket, you’ll need it to access ALL the SLAY Festival awesomeness. 
-                    <br />
+                <p/>
+                <p style="line-height: 1.5; font-size: 16px;">
                     Follow our Instagram page @SLAYFestival for special announcements and be the first to know about upcoming giveaways 😉. Don’t forget to use the hashtag #SLAYFestival2019 on all your SLAY Festival related posts and tag ALL your friends so they don’t miss out!
-                    <br />
+                <p/>
+                <p style="line-height: 1.5; font-size: 16px;">
                     We can’t wait to see you on the 28th of September. Get ready for the time of your life!
                 </p>
               </td>
