@@ -32,7 +32,7 @@ class OrderMailer
 
         foreach ($order->orderItems as $order_item) {
             # code...
-            var_dump($orderItems->title);
+            var_dump($order_item->title);
         }
 
         if($order->orderItems->title == "Amina"){
