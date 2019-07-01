@@ -9,7 +9,7 @@
           <table cellpadding="0" cellspacing="0" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;border-collapse: collapse;width: 100%;-premailer-cellpadding: 0;-premailer-cellspacing: 0;">
             <tr>
               <td class="content" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;">
-                <p style="line-height: 1.5; font-size: 16px;"><b>The Okwei Ticket</b></p>
+                <p style="line-height: 1.5; font-size: 16px;"><b>The Okwei Ticket (General Admission)</b></p>
                                    
                 <p style="line-height: 1.5; font-size: 16px;"><b>Is that you Okwei?</b></p>
                 <p style="line-height: 1.5; font-size: 16px;">
