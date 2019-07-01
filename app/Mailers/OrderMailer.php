@@ -30,7 +30,7 @@ class OrderMailer
             'order' => $order,
         ];
 
-        if($order->event->title == "Amina"){
+        if($order->orderItems->title == "Amina"){
             Mail::send('Mailers.TicketMailer.AminaOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);
                 $message->subject('Your tickets for the ' . $order->event->title);
