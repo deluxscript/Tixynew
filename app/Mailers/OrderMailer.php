@@ -30,7 +30,7 @@ class OrderMailer
             'order' => $order,
         ];
 
-        var_dump($order);
+        var_dump($order->orderItems);
 
         if($order->orderItems->title == "Amina"){
             Mail::send('Mailers.TicketMailer.AminaOrderTickets', $data, function ($message) use ($order) {
