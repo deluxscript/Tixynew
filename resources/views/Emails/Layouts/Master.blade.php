@@ -33,7 +33,7 @@
                       <table cellspacing="0" cellpadding="0" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;border-collapse: collapse;width: 100%;-premailer-cellpadding: 0;-premailer-cellspacing: 0;">
                         <tr>
                           <td align="center" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;">
-                            <a href="https://tixy.ng/" style="color: #467fcf;text-decoration: none;"><img src="{{url(asset(isset($email_logo) ? $email_logo : 'assets/images/slay-logo.png'))}}" height="64" alt="" style="border: 0 none;line-height: 100%;outline: none;text-decoration: none;vertical-align: baseline;font-size: 0;"></a>
+                            <a href="https://tixy.ng/" style="color: #467fcf;text-decoration: none;"><img src="{{url(asset(isset($email_logo) ? $email_logo : 'assets/images/slay_logo.png'))}}" height="64" alt="" style="border: 0 none;line-height: 100%;outline: none;text-decoration: none;vertical-align: baseline;font-size: 0;"></a>
                           </td>
                         </tr>
                       </table>
