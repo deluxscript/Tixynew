@@ -30,7 +30,7 @@ class OrderMailer
             'order' => $order,
         ];
 
-        foreach ($$order->orderItems as $order_item) {
+        foreach ($order->orderItems as $order_item) {
             # code...
             var_dump($orderItems->title);
         }
