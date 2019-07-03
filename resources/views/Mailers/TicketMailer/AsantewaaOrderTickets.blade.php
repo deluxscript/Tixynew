@@ -9,7 +9,7 @@
           <table cellpadding="0" cellspacing="0" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;border-collapse: collapse;width: 100%;-premailer-cellpadding: 0;-premailer-cellspacing: 0;">
             <tr>
               <td class="content" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;">
-                <p style="line-height: 1.5; font-size: 16px;"><b>The Asantewaa Ticket</b></p>
+                <p style="line-height: 1.5; font-size: 16px; text-align: center;"><b>The Asantewaa Ticket</b></p>
                                    
                 <p style="line-height: 1.5; font-size: 16px; text-align: center;"><b>Like Yaa Asantewaa, you’re one of one.
                     </b></p>
@@ -31,9 +31,6 @@
                 <td class="content text-center border-top" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;text-align: center;border-top: 1px solid #f0f0f0;">
                   <p style="margin: 0 0 1em;">
                       We know you’re going to have a great time. You can always find the full schedule, the answers to your top questions and more details about the event at SLAYFestival.com.
-                  </p>
-                  <p style="margin: 0 0 1em;">
-                      If you still have questions after checking out the website, feel free to reach out to us at info@slayfestival.com.”
                   </p>
                 </td>
               </tr>
