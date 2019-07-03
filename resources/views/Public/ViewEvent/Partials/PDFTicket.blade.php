@@ -71,25 +71,25 @@
                                 <br />
                                 <div class="barcode">
                             {!! DNS2D::getBarcodeSVG($attendee->private_reference_number, "QRCODE", 6, 6) !!}
+                            <img
+                              src="{{asset('assets/images/slay-logo.png')}}"
+                                      width="160"
+                                      height="160"
+                                      alt=""
+                                      style="float: right"
+                                    />
                         </div>
-                        <img
-                          src="{{asset('assets/images/slay-logo.png')}}"
-                                  width="160"
-                                  height="160"
-                                  alt=""
-                                  style="float: right"
-                                />
                         @if($event->is_1d_barcode_enabled)
                         <div class="barcode_vertical">
                             {!! DNS1D::getBarcodeSVG($attendee->private_reference_number, "C39+", 1, 50) !!}
+                            <img
+                              src="{{asset('assets/images/slay-logo.png')}}"
+                                      width="160"
+                                      height="160"
+                                      alt=""
+                                      style="float: right"
+                                    />
                         </div>
-                        <img
-                          src="{{asset('assets/images/slay-logo.png')}}"
-                                  width="160"
-                                  height="160"
-                                  alt=""
-                                  style="float: right"
-                                />
                         @endif
                                 <br />
                                 <br />
