@@ -33,7 +33,7 @@ class OrderMailer
         foreach ($order->orderItems as $order_item) {
         
 
-        if($order_item->title == "Amina"){
+        if($order_item->title == "Amina (All Access)"){
             Mail::send('Mailers.TicketMailer.AminaOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);
                 $message->subject('Your tickets for the ' . $order->event->title);
@@ -52,7 +52,7 @@ class OrderMailer
             });
         }
 
-        elseif ($order_item->title == "Nehanda") {
+        elseif ($order_item->title == "Nehanda (Speaker)") {
             # code...
             Mail::send('Mailers.TicketMailer.NehandaOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);
@@ -72,7 +72,7 @@ class OrderMailer
             });
         }
 
-        elseif ($order_item->title == "Emotan") {
+        elseif ($order_item->title == "Emotan (Vendor)") {
             # code...
             Mail::send('Mailers.TicketMailer.EmotanOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);
@@ -92,7 +92,7 @@ class OrderMailer
             });
         }
 
-        elseif ($order_item->title == "Moremi") {
+        elseif ($order_item->title == "Moremi (Press)") {
             # code...
             Mail::send('Mailers.TicketMailer.MoremiOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);
@@ -112,7 +112,7 @@ class OrderMailer
             });
         }
 
-        elseif ($order_item->title == "Asantewaa") {
+        elseif ($order_item->title == "Asantewaa (VIP)") {
             # code...
             Mail::send('Mailers.TicketMailer.AsantewaaOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);
