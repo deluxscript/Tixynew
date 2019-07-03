@@ -73,8 +73,8 @@
                             {!! DNS2D::getBarcodeSVG($attendee->private_reference_number, "QRCODE", 6, 6) !!}
                             <img
                               src="{{asset('assets/images/slay-logo.png')}}"
-                                      width="160"
-                                      height="160"
+                                      width="130"
+                                      height="130"
                                       alt=""
                                       style="float: right"
                                     />
@@ -84,8 +84,8 @@
                             {!! DNS1D::getBarcodeSVG($attendee->private_reference_number, "C39+", 1, 50) !!}
                             <img
                               src="{{asset('assets/images/slay-logo.png')}}"
-                                      width="160"
-                                      height="160"
+                                      width="130"
+                                      height="130"
                                       alt=""
                                       style="float: right"
                                     />
