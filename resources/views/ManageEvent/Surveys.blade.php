@@ -43,7 +43,7 @@
                 </button>
             </div>
 
-            {{-- <div class="btn-group btn-group btn-group-responsive">
+            <div class="btn-group btn-group btn-group-responsive">
                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
                     <i class="ico-users"></i> Export Answers <span class="caret"></span>
                 </button>
@@ -57,7 +57,7 @@
                     <li><a href="{{route('showExportAnswers', ['event_id'=>$event->id,'export_as'=>'html'])}}">HTML</a>
                     </li>
                 </ul>
-            </div> --}}
+            </div>
         </div>
         <!--/ Toolbar -->
     </div>
