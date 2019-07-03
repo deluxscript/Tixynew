@@ -32,6 +32,9 @@
                   <p style="margin: 0 0 1em;">
                       We know you’re going to have a great time. You can always find the full schedule, the answers to your top questions and more details about the event at SLAYFestival.com.
                   </p>
+                  <p style="margin: 0 0 1em;">
+                      If you still have questions after checking out the website, feel free to reach out to us at info@slayfestival.com.
+                  </p>
                 </td>
               </tr>
           </table>
