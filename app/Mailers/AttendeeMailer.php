@@ -81,16 +81,23 @@ class AttendeeMailer extends Mailer
             'attendee' => $attendee,
         ];
 
-        Mail::queue('Mailers.TicketMailer.SendAttendeeInvite', $data, function ($message) use ($attendee) {
-            $message->to($attendee->email);
-            $message->subject('Your ticket for the ' . $attendee->order->event->title);
-            
-            $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
+        foreach ($attendee->order->orderItems as $order_item) {
 
-            $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
+            if($order_item->title == "Amina (All Access)"){
 
-            $message->attach($file_path);
-        });
+                Mail::queue('Mailers.TicketMailer.AminaOrderTickets', $data, function ($message) use ($attendee) {
+                    $message->to($attendee->email);
+                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
+                    
+                    $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
+
+                    $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
+
+                    $message->attach($file_path);
+                });
+            }
+
+        }
 
     }
 
