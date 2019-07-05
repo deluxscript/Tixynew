@@ -82,7 +82,8 @@
                         @if($event->is_1d_barcode_enabled)
                         <div class="barcode_vertical">
                             {!! DNS1D::getBarcodeSVG($attendee->private_reference_number, "C39+", 1, 50) !!}
-                            <img alt="{{$event->title}}" src="{{config('attendize.cdn_url_user_assets').'/'.$event->images->first()['image_path']}}" width="130" height="130" style="float: right" />
+                            {!! HTML::image(asset($image_path)) !!}
+                            {{-- <img alt="{{$event->title}}" src="{{config('attendize.cdn_url_user_assets').'/'.$event->images->first()['image_path']}}" width="130" height="130" style="float: right" /> --}}
                         </div>
                         @endif
                                 <br />
