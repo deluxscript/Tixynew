@@ -71,19 +71,13 @@
                                 <br />
                                 <div class="barcode">
                             {!! DNS2D::getBarcodeSVG($attendee->private_reference_number, "QRCODE", 6, 6) !!}
-                            <img
-                              src="{{asset('assets/images/slay-logo.png')}}"
-                                      width="130"
-                                      height="130"
-                                      alt=""
-                                      style="float: right"
-                                    />
+                            <img alt="{{$event->title}}" src="{{config('attendize.cdn_url_user_assets').'/'.$event->images->first()['image_path']}}" width="130" height="130" style="float: right" />
                         </div>
                         @if($event->is_1d_barcode_enabled)
                         <div class="barcode_vertical">
                             {!! DNS1D::getBarcodeSVG($attendee->private_reference_number, "C39+", 1, 50) !!}
-                            {!! HTML::image(asset($image_path)) !!}
-                            {{-- <img alt="{{$event->title}}" src="{{config('attendize.cdn_url_user_assets').'/'.$event->images->first()['image_path']}}" width="130" height="130" style="float: right" /> --}}
+                            <img alt="{{$event->title}}" src="{{config('attendize.cdn_url_user_assets').'/'.$event->images->first()['image_path']}}" width="130" height="130" style="float: right" />
+                            {{-- {!! HTML::image(asset($image_path)) !!} --}}
                         </div>
                         @endif
                                 <br />
