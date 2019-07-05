@@ -9,9 +9,9 @@
           <table cellpadding="0" cellspacing="0" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;border-collapse: collapse;width: 100%;-premailer-cellpadding: 0;-premailer-cellspacing: 0;">
             <tr>
               <td class="content" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;">
-                <p style="line-height: 1.5; font-size: 16px; text-align: center;"><b>The Okwei Ticket (General Admission)</b></p>
+                <p style="line-height: 1.5; font-size: 16px; text-align: center;"><b>The Okwei Ticket</b></p>
                                    
-                <p style="line-height: 1.5; font-size: 16px;"><b>Is that you Okwei?</b></p>
+                <p style="line-height: 1.5; font-size: 16px; text-align: center;"><b>Is that you Okwei?</b></p>
                 <p style="line-height: 1.5; font-size: 16px;">
                     Okwei of Osomari was a woman who was about her <b>business</b>, she traded everything from ivory, gold and silver to palm oil. She achieved so much that her people had to crown her Omu (Queen) Okwei. 
                 <p/>
