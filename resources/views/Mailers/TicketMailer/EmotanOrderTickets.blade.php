@@ -23,7 +23,7 @@
                         This is your official ticket to the event. Please have it available on your phone for quick check in at the SLAY Festival venue. 
                 <p/>
                 <p style="line-height: 1.5; font-size: 16px;">
-                        Follow our Instagram page @SLAYFestival for special announcements and don’t forget to use the hashtag #SLAYFestival2019 on all your SLAY Festival related posts!
+                        Follow our Instagram page <a href="Instagram.com/SLAYFestival">@SLAYFestival</a> for special announcements and don’t forget to use the hashtag #SLAYFestival2019 on all your SLAY Festival related posts!
                 <p/>
                 <p style="line-height: 1.5; font-size: 16px;">
                         For follow up questions, please reach out to your vendor coordinator. 
@@ -33,7 +33,7 @@
             <tr>
                 <td class="content text-center border-top" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;text-align: center;border-top: 1px solid #f0f0f0;">
                   <p style="margin: 0 0 1em;">
-                      We know you’re going to have a great time. You can always find the full schedule, the answers to your top questions and more details about the event at SLAYFestival.com.
+                      We know you’re going to have a great time. You can always find the full schedule, the answers to your top questions and more details about the event at <a href="//slayfestival.com">SLAYFestival.com</a>
                   </p>
                   <p style="margin: 0 0 1em;">
                       If you still have questions after checking out the website, feel free to reach out to us at info@slayfestival.com.
