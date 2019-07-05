@@ -21,7 +21,7 @@
 
                 @if($event->social_show_facebook)
                 <li class="rrssb-facebook">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=palmwinefest.com" class="popup">
+                    <a href="https://www.facebook.com/slayfestival" class="popup">
                         <span class="rrssb-icon">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
                                 <path d="M27.825,4.783c0-2.427-2.182-4.608-4.608-4.608H4.783c-2.422,0-4.608,2.182-4.608,4.608v18.434
@@ -51,7 +51,7 @@
                 @endif
                 @if($event->social_show_twitter)
                 <li class="rrssb-twitter">
-                    <a href="http://twitter.com/intent/tweet?text=Check out: palmwinefest.com {{{Str::words(strip_tags($event->description), 20)}}}" class="popup">
+                    <a href="http://twitter.com/sheleadasfrica" class="popup">
                         <span class="rrssb-icon">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  width="28px" height="28px" viewBox="0 0 28 28" enable-background="new 0 0 28 28" xml:space="preserve">
