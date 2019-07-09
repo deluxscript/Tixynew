@@ -132,7 +132,7 @@ class OrderMailer
             });
         }
 
-        elseif ($order_item->title == "Okwei (General Admission)") {
+        elseif ($order_item->title == "Okwei (General Admission)" || $order_item->title == "Okwei (Early Bird)") {
             # code...
             Mail::send('Mailers.TicketMailer.OkweiOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);
