@@ -110,6 +110,18 @@ class EventOrdersController extends MyBaseController
         return view('ManageEvent.Modals.EditOrder', $data);
     }
 
+    public function ImageHeader(Request $order_id)
+    {
+        $order = Order::scope()->find($order_id);
+
+        $data = [
+            'order'     => $order,
+            'event'     => $order->event(),
+        ];
+
+        return view('Emails.Layout.Master', $data);
+    }
+
     /**
      * Shows 'Cancel Order' modal
      *
