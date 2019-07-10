@@ -1,4 +1,4 @@
-@extends('Emails.Layouts.Master')
+@extends('Emails.Layouts.Topmaster')
 
 @section('message_content')
 <div class="main-content" style="box-sizing: border-box;">
