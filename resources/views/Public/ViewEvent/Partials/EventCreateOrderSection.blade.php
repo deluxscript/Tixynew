@@ -200,7 +200,7 @@
                     </a>
                 </div>
                 @foreach($tickets as $ticket)
-                {{ vardump($ticket['qty'])}}
+                {{ var_dump($ticket['qty'])}}
                 @endforeach
 
                 <div class="row">
