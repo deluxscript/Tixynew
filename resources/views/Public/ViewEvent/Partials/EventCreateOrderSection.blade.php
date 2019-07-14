@@ -194,13 +194,14 @@
                     </div>
                 </div>
 
+                @foreach($tickets as $ticket)
+                @if($ticket['qty']<=2)
                 <div class="p20 pl0">
                     <a href="javascript:void(0);" class="btn btn-primary" style="width:100%; text-transform: uppercase;" id="mirror_buyer_info">
                         Copy buyer's details to all ticket holders
                     </a>
                 </div>
-                @foreach($tickets as $ticket)
-                {{ var_dump($ticket['qty'])}}
+                @endif
                 @endforeach
 
                 <div class="row">
