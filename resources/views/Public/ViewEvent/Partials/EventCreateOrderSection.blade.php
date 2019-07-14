@@ -188,7 +188,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             {!! Form::label("order_email", 'Email') !!}
-                            {!! Form::text("order_email", null, ['required' => 'required', 'id' => 'pemail', 'class' => 'form-control', 'type' => 'email']) !!}
+                            {!! Form::text("order_email", null, ['required' => 'required', 'id' => 'pemail', 'class' => 'form-control']) !!}
                             <p style="font-size: 13px"><span style="font-size: 10px">*</span> Please note that tickets will only be sent to buyer's email</p>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", 'Email Address') !!}
-                                                    {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'type' => 'email', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email eemail form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email eemail form-control"]) !!}
 						    <p style="font-size: 13px"><span style="font-size: 10px">*</span> Please note that tickets will only be sent to buyer's email</p>
                                                 </div>
                                             </div>
