@@ -199,6 +199,9 @@
                         Copy buyer's details to all ticket holders
                     </a>
                 </div>
+                @foreach($tickets as $ticket)
+                {{ vardump($ticket['qty'])}}
+                @endforeach
 
                 <div class="row">
                     <div class="col-md-12">
