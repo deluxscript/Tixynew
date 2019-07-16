@@ -193,7 +193,6 @@
                         </div>
                     </div>
                 </div>
-                {{print_r($tickets)}}
                 @foreach($tickets as $ticket)
                 @if($ticket['qty']<=2)
                 <div class="p20 pl0">
