@@ -195,7 +195,7 @@
                 </div>
                 @foreach($tickets as $ticket)
                 {{$qtyy = $ticket['qty']}}
-                {{var_dump($qtty++)}}
+                {{var_dump($qtyy++)}}
                 @if($ticket['qty']<=2)
                 <div class="p20 pl0">
                     <a href="javascript:void(0);" class="btn btn-primary" style="width:100%; text-transform: uppercase;" id="mirror_buyer_info">
