@@ -193,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-                @for ($i = 0; $i < $tickets.length; $i++)
+                @for ($i = 0; $i < count($tickets); $i++)
                     {{print_r($tickets[$i]['qty'])}}
                 @endfor
                 @foreach($tickets as $ticket)
