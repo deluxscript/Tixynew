@@ -204,7 +204,7 @@
                 @endif
                 @endforeach
 
-                {{var_dump($qtyy++)}}
+                {{var_dump($qtyy+$qtyy)}}
 
                 <div class="row">
                     <div class="col-md-12">
