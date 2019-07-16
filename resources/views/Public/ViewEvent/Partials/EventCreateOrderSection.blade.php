@@ -193,8 +193,10 @@
                         </div>
                     </div>
                 </div>
+                @for ($i = 0; $i < $tickets.length; $i++)
+                    {{print_r($tickets[$i]['qty'])}}
+                @endfor
                 @foreach($tickets as $ticket)
-                {{$qtyy = $ticket['qty']}}
                 @if($ticket['qty']<=2)
                 <div class="p20 pl0">
                     <a href="javascript:void(0);" class="btn btn-primary" style="width:100%; text-transform: uppercase;" id="mirror_buyer_info">
@@ -203,8 +205,6 @@
                 </div>
                 @endif
                 @endforeach
-
-                {{var_dump($qtyy+$qtyy)}}
 
                 <div class="row">
                     <div class="col-md-12">
