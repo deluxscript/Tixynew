@@ -193,7 +193,7 @@
                         </div>
                     </div>
                 </div>
-
+                {{var_dump($tickets)}}
                 @foreach($tickets as $ticket)
                 @if($ticket['qty']<=2)
                 <div class="p20 pl0">
@@ -350,7 +350,7 @@
                     repeatCount="indefinite"/>
                   </path>
                 </svg>
-                <p style="color: white; font-size: 20px; margin-top: 200px;">Do not close this page. Processing ticket...</p>
+                <p style="color: white; font-size: 20px; margin-top: 200px; font-weight:bold;">Do not close this page. Processing ticket...</p>
               </div>
         </div>
     </div>
