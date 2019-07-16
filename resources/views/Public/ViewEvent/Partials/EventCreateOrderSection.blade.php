@@ -193,9 +193,16 @@
                         </div>
                     </div>
                 </div>
+                <?php $sum = 0 ?>
                 @for ($i = 0; $i < count($tickets); $i++)
-                    {{$tickets[$i]['qty']}}
+                    <?php
+                    
+                        $inTickets = $tickets[$i]['qty'];
+                        $sum += $inTickets;
+                    
+                    ?>
                 @endfor
+                {{var_dump($sum)}}
                 @foreach($tickets as $ticket)
                 @if($ticket['qty']<=2)
                 <div class="p20 pl0">
