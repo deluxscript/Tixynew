@@ -194,8 +194,7 @@
                     </div>
                 </div>
                 @foreach($tickets as $ticket)
-                @for($i=0; $i<=$ticket['qty']-1; $i++)
-                {{var_dump($i)}}
+                {{var_dump($ticket['qty'] + $ticket['qty'])}}
                 @if($ticket['qty']<=2)
                 <div class="p20 pl0">
                     <a href="javascript:void(0);" class="btn btn-primary" style="width:100%; text-transform: uppercase;" id="mirror_buyer_info">
@@ -203,7 +202,6 @@
                     </a>
                 </div>
                 @endif
-                @endfor
                 @endforeach
 
                 <div class="row">
