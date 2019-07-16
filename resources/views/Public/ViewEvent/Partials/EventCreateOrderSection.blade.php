@@ -194,7 +194,7 @@
                     </div>
                 </div>
                 @for ($i = 0; $i < count($tickets); $i++)
-                    {{var_dump($tickets[$i]['qty']++)}}
+                    {{$tickets[$i]['qty']}}
                 @endfor
                 @foreach($tickets as $ticket)
                 @if($ticket['qty']<=2)
