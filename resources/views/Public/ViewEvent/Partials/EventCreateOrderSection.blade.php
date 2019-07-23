@@ -202,7 +202,7 @@
                     
                     ?>
                 @endfor
-                @if($sum<=2)
+                @if($sum<=1)
                 <div class="p20 pl0">
                     <a href="javascript:void(0);" class="btn btn-primary" style="width:100%; text-transform: uppercase;" id="mirror_buyer_info">
                         Copy buyer's name to all ticket holders
