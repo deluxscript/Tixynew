@@ -34,9 +34,7 @@
                 <td class="content text-center border-top" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;text-align: center;border-top: 1px solid #f0f0f0;">
                   <p style="margin: 0 0 1em;">
                     We know you’re going to have a great time. You can always find the full schedule, the answers to your top questions and more details about the event at <a href="//slayfestival.com">SLAYFestival.com</a>. SLAY Festival is all about YOU so <a href="http://bit.ly/SLAYFestivalsurvey">click here</a> to tell us what you want to see at SLAY Festival 2019!
-                    <br/>
-                    If you still have questions after checking out the website, feel free to reach out to us at info@slayfestival.com.
-                </p>
+                  </p>
                   <p style="margin: 0 0 1em;">
                       If you still have questions after checking out the website, feel free to reach out to us at info@slayfestival.com.
                   </p>
