@@ -193,22 +193,22 @@
                         </div>
                     </div>
                 </div>
-                <?php $sum = 0 ?>
+                {{-- $sum = 0
                 @for ($i = 0; $i < count($tickets); $i++)
-                    <?php
+                    
                     
                         $inTickets = $tickets[$i]['qty'];
                         $sum += $inTickets;
                     
-                    ?>
-                @endfor
-                @if($sum<=1)
+                    
+                @endfor --}}
+                {{-- @if($sum<=1) --}}
                 <div class="p20 pl0">
                     <a href="javascript:void(0);" class="btn btn-primary" style="width:100%; text-transform: uppercase;" id="mirror_buyer_info">
                         Copy buyer's name to all ticket holders
                     </a>
                 </div>
-                @endif
+                {{-- @endif --}}
 
                 <div class="row">
                     <div class="col-md-12">
