@@ -173,13 +173,13 @@
                     <div class="col-xs-6">
                         <div class="form-group">
                             {!! Form::label("order_first_name", 'First Name') !!}
-                            {!! Form::text("order_first_name", null, ['required' => 'required', 'class' => 'form-control']) !!}
+                            {!! Form::text("order_first_name", null, ['required' => 'required', 'autocomplete' => 'off', 'class' => 'form-control']) !!}
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="form-group">
                             {!! Form::label("order_last_name", 'Last Name') !!}
-                            {!! Form::text("order_last_name", null, ['required' => 'required', 'class' => 'form-control']) !!}
+                            {!! Form::text("order_last_name", null, ['required' => 'required', 'autocomplete' => 'off', 'class' => 'form-control']) !!}
                         </div>
                     </div>
                 </div>
@@ -188,7 +188,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             {!! Form::label("order_email", 'Email') !!}
-                            {!! Form::text("order_email", null, ['required' => 'required', 'id' => 'pemail', 'class' => 'form-control']) !!}
+                            {!! Form::text("order_email", null, ['required' => 'required', 'id' => 'pemail', 'autocomplete' => 'off', 'class' => 'form-control']) !!}
                             <p style="font-size: 13px"><span style="font-size: 10px">*</span> Please note that tickets will only be sent to buyer's email</p>
                         </div>
                     </div>
@@ -231,13 +231,13 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", 'First Name') !!}
-                                                    {!! Form::text("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_first_name.$i.{$ticket['ticket']['id']} ticket_holder_first_name ffname form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'autocomplete' => 'off', 'class' => "ticket_holder_first_name.$i.{$ticket['ticket']['id']} ticket_holder_first_name ffname form-control"]) !!}
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", 'Last Name') !!}
-                                                    {!! Form::text("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_last_name.$i.{$ticket['ticket']['id']} ticket_holder_last_name llname form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'autocomplete' => 'off', 'class' => "ticket_holder_last_name.$i.{$ticket['ticket']['id']} ticket_holder_last_name llname form-control"]) !!}
                                                 </div>
                                             </div>
                                         </div>
@@ -245,7 +245,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     {!! Form::label("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", 'Email Address') !!}
-                                                    {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email eemail form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'autocomplete' => 'off', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email eemail form-control"]) !!}
 						    <p style="font-size: 13px"><span style="font-size: 10px">*</span> Please note that tickets will only be sent to buyer's email</p>
                                                 </div>
                                             </div>
