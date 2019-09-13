@@ -16,7 +16,7 @@
                     Please have your ticket with you on arrival. A wristband will be given to you at the registration desk which will grant you access to the ART X Lagos fair.
                 <p/>
                 <p style="line-height: 1.5; font-size: 16px;">
-                    The fair is open from 10am – 8pm and the ART X Talks will start at 3pm, 4.45pm and 6.30pm. Please note, your ticket does not guarantee a seat for the ART X Talks so please arrive early to get a seat. Check out our website <a href="www.artxlagos.com">www.artxlagos.com</a> for more details on all of the fair sections.
+                    The ART X Lagos fair is open from 10am – 8pm and the ART X Talks will hold from 3pm - 7:45pm. Please note, your ticket does not guarantee a seat for the ART X Talks so please arrive early to secure a seat. Check out our website <a href="www.artxlagos.com">www.artxlagos.com</a> for more details on all of the fair sections.
                 <p/>
                 <p style="line-height: 1.5; font-size: 16px;">
                     We look forward to welcoming you to ART X Lagos this year. 
