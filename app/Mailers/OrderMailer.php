@@ -212,27 +212,27 @@ class OrderMailer
             });
         }
 
-        elseif ($order_item->title == "Saturday Day - Ticket") {
-            # code...
-            Mail::send('Mailers.TicketMailer.SaturdayOrderTickets', $data, function ($message) use ($order) {
-                $message->to($order->email);
-                $message->subject('Your tickets for ' . $order->event->title);
+        // elseif ($order_item->title == "Saturday Day - Ticket") {
+        //     # code...
+        //     Mail::send('Mailers.TicketMailer.SaturdayOrderTickets', $data, function ($message) use ($order) {
+        //         $message->to($order->email);
+        //         $message->subject('Your tickets for ' . $order->event->title);
     
-                $query = $order->attendees();
-                $attendees = $query->get();
-                $count_attendee = count($attendees);
-                $j = 0;
-                do {
-                    $file_name = $attendees[$j]['first_name']. '_' .$attendees[$j]['last_name']. '_' .$order->order_reference;
+        //         $query = $order->attendees();
+        //         $attendees = $query->get();
+        //         $count_attendee = count($attendees);
+        //         $j = 0;
+        //         do {
+        //             $file_name = $attendees[$j]['first_name']. '_' .$attendees[$j]['last_name']. '_' .$order->order_reference;
                 
-                    $file_path = public_path(config('attendize.event_pdf_tickets_path') . '/' . $file_name . $j . '.pdf');
-                    $message->attach($file_path);
-                    $j++;
-                } while ($j < $count_attendee);
-            });
-        }
+        //             $file_path = public_path(config('attendize.event_pdf_tickets_path') . '/' . $file_name . $j . '.pdf');
+        //             $message->attach($file_path);
+        //             $j++;
+        //         } while ($j < $count_attendee);
+        //     });
+        // }
 
-        elseif ($order_item->title == "Sunday Day - Ticket") {
+        elseif ($order_item->title == "Sunday Day - Ticket" || $order_item->title == "Sunday Day - Ticket") {
             # code...
             Mail::send('Mailers.TicketMailer.SundayOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);

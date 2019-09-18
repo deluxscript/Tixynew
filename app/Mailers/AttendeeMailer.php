@@ -153,21 +153,7 @@ class AttendeeMailer extends Mailer
                 });
             }
 
-            elseif($order_item->title == "Saturday Day - Ticket"){
-
-                Mail::queue('Mailers.TicketMailer.SaturdayOrderTickets', $data, function ($message) use ($attendee) {
-                    $message->to($attendee->email);
-                    $message->subject('Your ticket for ' . $attendee->order->event->title);
-                    
-                    $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
-
-                    $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
-
-                    $message->attach($file_path);
-                });
-            }
-
-            elseif($order_item->title == "Sunday Day - Ticket"){
+            elseif($order_item->title == "Saturday Day - Ticket" || $order_item->title == "Sunday Day - Ticket"){
 
                 Mail::queue('Mailers.TicketMailer.SundayOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
@@ -180,6 +166,20 @@ class AttendeeMailer extends Mailer
                     $message->attach($file_path);
                 });
             }
+
+            // elseif($order_item->title == "Sunday Day - Ticket"){
+
+            //     Mail::queue('Mailers.TicketMailer.SundayOrderTickets', $data, function ($message) use ($attendee) {
+            //         $message->to($attendee->email);
+            //         $message->subject('Your ticket for ' . $attendee->order->event->title);
+                    
+            //         $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
+
+            //         $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
+
+            //         $message->attach($file_path);
+            //     });
+            // }
 
             elseif($order_item->title == "2k Weekend"){
 
