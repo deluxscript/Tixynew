@@ -9,7 +9,7 @@
           <table cellpadding="0" cellspacing="0" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;border-collapse: collapse;width: 100%;-premailer-cellpadding: 0;-premailer-cellspacing: 0;">
             <tr>
               <td class="content" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;">
-              <p style="line-height: 1.5; font-size: 16px;">Dear {{$order->full_name}}</p>
+              <p style="line-height: 1.5; font-size: 16px;">Dear {{$attendee->order->full_name}}</p>
                                    
                 <p style="line-height: 1.5; font-size: 16px;">Thank you for purchasing a ticket to attend the 4th Edition of ART X Lagos.</p>
                 <p style="line-height: 1.5; font-size: 16px;">
