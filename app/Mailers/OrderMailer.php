@@ -132,7 +132,7 @@ class OrderMailer
             });
         }
 
-        elseif ($order_item->title == "2k Weekend") {
+        elseif ($order_item->title == "1K Flash Sale") {
             # code...
             Mail::send('Mailers.TicketMailer.OkweiOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);

@@ -153,7 +153,7 @@ class AttendeeMailer extends Mailer
                 });
             }
 
-            elseif($order_item->title == "2k Weekend"){
+            elseif($order_item->title == "1K Flash Sale"){
 
                 Mail::queue('Mailers.TicketMailer.OkweiOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
