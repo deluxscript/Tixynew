@@ -24,7 +24,7 @@ class AttendeeMailer extends Mailer
 
         Mail::send('Mailers.TicketMailer.SendAttendeeTicket', $data, function ($message) use ($attendee) {
             $message->to($attendee->email);
-            $message->subject('Your ticket for the ' . $attendee->order->event->title);
+            $message->subject('Your ticket for ' . $attendee->order->event->title);
             // dd($attendee['first_name']);
 
             $file_name = $attendee['first_name']. '_' .$attendee['last_name']. '_' .$attendee->reference . '0';
@@ -36,7 +36,7 @@ class AttendeeMailer extends Mailer
     }
 
     /**
-     * Sends the attendees a message
+     * Sends attendees a message
      *
      * @param Message $message_object
      */
@@ -87,8 +87,8 @@ class AttendeeMailer extends Mailer
 
                 Mail::queue('Mailers.TicketMailer.AminaOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
-                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
-                    
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
+
                     $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
 
                     $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
@@ -101,8 +101,8 @@ class AttendeeMailer extends Mailer
 
                 Mail::queue('Mailers.TicketMailer.NehandaOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
-                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
-                    
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
+
                     $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
 
                     $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
@@ -115,8 +115,8 @@ class AttendeeMailer extends Mailer
 
                 Mail::queue('Mailers.TicketMailer.EmotanOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
-                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
-                    
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
+
                     $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
 
                     $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
@@ -129,8 +129,7 @@ class AttendeeMailer extends Mailer
 
                 Mail::queue('Mailers.TicketMailer.MoremiOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
-                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
-                    
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
                     $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
 
                     $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
@@ -143,7 +142,51 @@ class AttendeeMailer extends Mailer
 
                 Mail::queue('Mailers.TicketMailer.AsantewaaOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
-                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
+
+                    $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
+
+                    $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
+
+                    $message->attach($file_path);
+                });
+            }
+
+
+
+            elseif($order_item->title == "Saturday Day - Ticket" || $order_item->title == "Sunday Day - Ticket"){
+
+                Mail::queue('Mailers.TicketMailer.SundayOrderTickets', $data, function ($message) use ($attendee) {
+                    $message->to($attendee->email);
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
+
+                    $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
+
+                    $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
+
+                    $message->attach($file_path);
+                });
+            }
+
+            // elseif($order_item->title == "Sunday Day - Ticket"){
+
+            //     Mail::queue('Mailers.TicketMailer.SundayOrderTickets', $data, function ($message) use ($attendee) {
+            //         $message->to($attendee->email);
+            //         $message->subject('Your ticket for ' . $attendee->order->event->title);
+                    
+            //         $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
+
+            //         $file_path = public_path(config('attendize.event_pdf_tickets_path')) . '/' . $file_name . '_' . $attendee->reference . '0' . '.pdf';
+
+            //         $message->attach($file_path);
+            //     });
+            // }
+
+            elseif($order_item->title == "2k Weekend"){
+
+                Mail::queue('Mailers.TicketMailer.OkweiOrderTickets', $data, function ($message) use ($attendee) {
+                    $message->to($attendee->email);
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
                     
                     $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
 
@@ -157,7 +200,7 @@ class AttendeeMailer extends Mailer
 
                 Mail::queue('Mailers.TicketMailer.OkweiOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
-                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
                     
                     $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
 
@@ -171,7 +214,7 @@ class AttendeeMailer extends Mailer
 
                 Mail::queue('Mailers.TicketMailer.OkweiOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
-                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
                     
                     $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
 
@@ -185,7 +228,7 @@ class AttendeeMailer extends Mailer
 
                 Mail::queue('Mailers.TicketMailer.OkweiOrderTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
-                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
                     
                     $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
 
@@ -199,7 +242,7 @@ class AttendeeMailer extends Mailer
 
                 Mail::queue('Mailers.TicketMailer.SendAttendeeInvite', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
-                    $message->subject('Your ticket for the ' . $attendee->order->event->title);
+                    $message->subject('Your ticket for ' . $attendee->order->event->title);
                     
                     $file_name = $attendee['first_name']. '_' .$attendee['last_name'];
 
