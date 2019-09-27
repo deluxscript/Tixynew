@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td class="content text-center border-top" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;text-align: center;border-top: 1px solid #f0f0f0;">
-                 <img src="{{asset('assets/images/footer.png')}}" class="border-left border-right border-top" alt="thumbs up" style="border-top-right-radius: 4px;border-top-left-radius: 4px;margin-bottom: -2px;z-index: 100;width: 100%;box-sizing: border-box;border: 0 none;line-height: 100%;outline: none;text-decoration: none;vertical-align: middle;font-size: 0;border-top: 1px solid #f0f0f0;border-left: 1px solid #f0f0f0;border-right: 1px solid #f0f0f0;" />
+                 <img src="{{asset('assets/images/afooter.png')}}" class="border-left border-right border-top" alt="thumbs up" style="border-top-right-radius: 4px;border-top-left-radius: 4px;margin-bottom: -2px;z-index: 100;width: 100%;box-sizing: border-box;border: 0 none;line-height: 100%;outline: none;text-decoration: none;vertical-align: middle;font-size: 0;border-top: 1px solid #f0f0f0;border-left: 1px solid #f0f0f0;border-right: 1px solid #f0f0f0;" />
                 </td>
               </tr>
           </table>
