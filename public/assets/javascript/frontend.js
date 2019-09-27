@@ -4577,7 +4577,6 @@ function payWithPaystack(){
     key: 'pk_live_0e7ec515a0c46b379b76ac123786bb42c7b03d81',
     email: pemail,
     amount: TotalAmtt,
-    subaccount: 'ACCT_cw7anq3sg7xupgu',
     ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     metadata: {
        custom_fields: [
@@ -4694,7 +4693,6 @@ $(function() {
               key: 'pk_live_0e7ec515a0c46b379b76ac123786bb42c7b03d81',
               email: pemail,
               amount: TotalAmtt,
-              subaccount: 'ACCT_cw7anq3sg7xupgu',
               ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
               metadata: {
                 custom_fields: [
