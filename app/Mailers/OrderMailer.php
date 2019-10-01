@@ -36,7 +36,7 @@ class OrderMailer
             $orderTitle = $order_item->title;
         }
 
-        var_dump($orderTitle);
+        print_r($orderTitle);
         
 
         if($order_item->title == "Amina (All Access)"){
