@@ -83,13 +83,22 @@
                             {!! DNS1D::getBarcodeSVG($attendee->private_reference_number, "C39+", 1, 50) !!}
                             <img alt="{{$event->title}}" src="data:image/png;base64, {{$image}}" width="130" 
                             style="float: right" >
-                            <img
-                              src="{{asset('assets/images/slay-logo.png')}}"
+                            @if($event->title == "ART X LAGOS")
+                              <img
+                              src="{{asset('assets/images/artx-logo.png')}}"
                                       width="130"
                                       height="130"
                                       alt=""
                                       style="float: right"
                                     />
+                            @else
+                              <img
+                              src="{{asset('assets/images/slay-logo.png')}}"
+                                width="130"
+                                height="130"
+                                alt=""
+                                style="float: right"
+                              />
                         </div>
                         @endif
                                 <br />
