@@ -30,7 +30,13 @@ class OrderMailer
             'order' => $order,
         ];
 
+        $orderTitle = [];
+
         foreach ($order->orderItems as $order_item) {
+            $orderTitle = $order_item->title;
+        }
+
+        var_dump($orderTitle);
         
 
         if($order_item->title == "Amina (All Access)"){
@@ -231,8 +237,6 @@ class OrderMailer
                 } while ($j < $count_attendee);
             });
         }
-
-    }
 
     }
 
