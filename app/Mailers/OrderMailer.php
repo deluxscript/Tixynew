@@ -212,7 +212,7 @@ class OrderMailer
             });
         }
 
-        elseif ($order_item->title == "Sunday Day - Ticket" || $order_item->title == "Saturday Day - Ticket" || ($order_item->title == "Saturday Day - Ticket" && $order_item->title == "Sunday Day - Ticket")) {
+        else {
             # code...
             Mail::send('Mailers.TicketMailer.SundayOrderTickets', $data, function ($message) use ($order) {
                 $message->to($order->email);
