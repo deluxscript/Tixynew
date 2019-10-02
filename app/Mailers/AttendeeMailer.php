@@ -156,7 +156,7 @@ class AttendeeMailer extends Mailer
 
             elseif ($order_item->title === "Sunday Day - Ticket" || $order_item->title === "Saturday Day - Ticket") {
 
-                Mail::queue('Mailers.TicketMailer.SundayOrderTickets', $data, function ($message) use ($attendee) {
+                Mail::queue('Mailers.TicketMailer.SundayAttendeeTickets', $data, function ($message) use ($attendee) {
                     $message->to($attendee->email);
                     $message->subject('Your ticket for ' . $attendee->order->event->title);
 
