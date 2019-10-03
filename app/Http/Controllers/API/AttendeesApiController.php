@@ -20,9 +20,10 @@ class AttendeesApiController extends ApiBaseController
         return Attendee::findOrFail($id);
     }
 
-    public function showQR($id)
+    public function showQR($qrcode)
     {
-        return Attendee::with('private_reference_number')->findOrFail($id);
+        return Attendee::where('private_reference_number', $qrcode)->findOrFail($qrcode);
+        // return Attendee::where('private_reference_number', $qrcode)->firstOrFail();
     }
 
     public function update($id)
