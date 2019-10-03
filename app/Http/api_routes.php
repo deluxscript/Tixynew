@@ -26,6 +26,7 @@ $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 
 $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 'cors'], function ($api) {
     $api->get('attendees', 'AttendeesApiController@index');
     $api->get('attendees/{id}', 'AttendeesApiController@show');
+    $api->get('attendees/{id}', 'AttendeesApiController@showQR');
     $api->post('attendees/{id}', 'AttendeesApiController@update');
 });
 
