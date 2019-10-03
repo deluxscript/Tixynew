@@ -32,7 +32,6 @@ $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 
 //Show Event info.
 $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 'cors'], function ($api) {
     $api->get('event', 'EventsApiController@index');
-    $api->get('event/{id}', 'EventsApiController@show');
 });
 
 //Show Order info.
