@@ -22,9 +22,10 @@ $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 
 });
 
 //Show Attendee info.
+
 $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 'cors'], function ($api) {
     $api->get('attendees', 'AttendeesApiController@index');
-    $api->get('attendees/{id}', 'AttendeesApiController@show');
+    $api->get('attendees/{ticket_id}', 'AttendeesApiController@show');
     $api->post('attendees/{id}', 'AttendeesApiController@update');
 });
 

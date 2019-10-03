@@ -6,6 +6,7 @@ use App\Models\Attendee;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 
+
 class AttendeesApiController extends ApiBaseController
 {
 
@@ -14,9 +15,9 @@ class AttendeesApiController extends ApiBaseController
         return Attendee::all();
     }
 
-    public function show($id)
+    public function show($ticket_id)
     {
-        return Attendee::findOrFail($id);
+        return Attendee::findOrFail($ticket_id);
     }
 
     public function update($id)
