@@ -14,10 +14,10 @@ class EventsApiController extends ApiBaseController
         return Event::all();
     }
 
-    public function show($id)
-    {
-        return Event::findOrFail($id);
-    }
+    // public function show($id)
+    // {
+    //     return Event::findOrFail($id);
+    // }
 
     // /**
     //  * @param Request $request
