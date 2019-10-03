@@ -25,13 +25,14 @@ $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 
 
 $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 'cors'], function ($api) {
     $api->get('attendees', 'AttendeesApiController@index');
-    $api->get('attendees/{ticket_id}', 'AttendeesApiController@show');
+    $api->get('attendees/{id}', 'AttendeesApiController@show');
     $api->post('attendees/{id}', 'AttendeesApiController@update');
 });
 
 //Show Event info.
 $api->version('v1', ['namespace' => 'App\Http\Controllers\API', 'middleware' => 'cors'], function ($api) {
     $api->get('event', 'EventsApiController@index');
+    $api->get('event/{id}', 'EventsApiController@show');
 });
 
 //Show Order info.

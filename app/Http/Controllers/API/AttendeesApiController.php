@@ -15,9 +15,9 @@ class AttendeesApiController extends ApiBaseController
         return Attendee::all();
     }
 
-    public function show($ticket_id)
+    public function show($id)
     {
-        return Attendee::findOrFail($ticket_id);
+        return Attendee::findOrFail($id);
     }
 
     public function update($id)
