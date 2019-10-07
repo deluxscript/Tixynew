@@ -29,7 +29,7 @@
         <meta property="og:image" content="{{URL::to($event->images->first()['image_path'])}}" />
         @endif
         <meta property="og:description" content="{{{Str::words(strip_tags($event->description)), 20}}}" />
-        <meta property="og:site_name" content="Attendize.com" />
+        <meta property="og:site_name" content="app.tixy.ng" />
 
 
         <!--[if lt IE 9]>
