@@ -2,22 +2,30 @@
 
 @section('message_content')
 <div class="main-content" style="box-sizing: border-box;">
-    <img src="{{asset('assets/images/xtixy.png')}}" class=" va-middle border-left border-right border-top" alt="thumbs up" style="border-top-right-radius: 4px;border-top-left-radius: 4px;margin-bottom: -2px;z-index: 100;width: 100%;box-sizing: border-box;border: 0 none;line-height: 100%;outline: none;text-decoration: none;vertical-align: middle;font-size: 0;border-top: 1px solid #f0f0f0;border-left: 1px solid #f0f0f0;border-right: 1px solid #f0f0f0;">
+    <img src="{{asset('assets/images/new-banner.png')}}" class=" va-middle border-left border-right border-top" alt="thumbs up" style="border-top-right-radius: 4px;border-top-left-radius: 4px;margin-bottom: -2px;z-index: 100;width: 100%;box-sizing: border-box;border: 0 none;line-height: 100%;outline: none;text-decoration: none;vertical-align: middle;font-size: 0;border-top: 1px solid #f0f0f0;border-left: 1px solid #f0f0f0;border-right: 1px solid #f0f0f0;">
     <table class="box" cellpadding="0" cellspacing="0" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;border-collapse: collapse;width: 100%;background: #ffffff;border-radius: 3px;-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);border: 1px solid #f0f0f0;-premailer-cellpadding: 0;-premailer-cellspacing: 0;">
       <tr>
         <td style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;">
           <table cellpadding="0" cellspacing="0" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;border-collapse: collapse;width: 100%;-premailer-cellpadding: 0;-premailer-cellspacing: 0;">
             <tr>
               <td class="content" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;">
-                <p class="h1" style="font-weight: bold;margin: 0 0 .5em;font-size: 28px;line-height: 130%;">
+                {{-- <p class="h1" style="font-weight: bold;margin: 0 0 .5em;font-size: 28px;line-height: 130%;">
                   Dear {{$order->full_name}},
+                </p> --}}
+                <p class="h1" style="font-weight: bold;margin: 0 0 .5em;font-size: 28px;line-height: 130%;">
+                  Dear Guest,
                 </p>
                 <p style="margin: 0 0 1em;">
+                  You are now checked in on The Palmwine Express.<br><br>This is your ticket/boarding pass for <b>Palmwine Fest 2019</b><br>
+                  <br>
+                  You can also view you order details and download your tickets at: {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
+                </p>
+                {{-- <p style="margin: 0 0 1em;">
                   Your order for the event <b>{{$order->event->title}}</b> was successful.<br><br>
 Your tickets are attached to this email.<br>
                   <br>
                   You can also view you order details and download your tickets at: {{route('showOrderDetails', ['order_reference' => $order->order_reference])}}
-                </p>
+                </p> --}}
               </td>
             </tr>
             <tr>
