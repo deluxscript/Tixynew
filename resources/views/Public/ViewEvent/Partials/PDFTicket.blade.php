@@ -84,7 +84,7 @@
                             <img alt="{{$event->title}}" src="data:image/png;base64, {{$image}}" width="130" 
                             style="float: right" >
                             <img
-                              src="{{asset('assets/images/ticketimg.png')}}"
+                              src="{{asset('assets/images/tixy.png')}}"
                                       width="130"
                                       height="130"
                                       alt=""
