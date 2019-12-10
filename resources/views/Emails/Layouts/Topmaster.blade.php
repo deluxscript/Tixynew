@@ -63,7 +63,7 @@
               <tr>
                 <td class="px-sm pt-sm" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding-top: 8px;padding-right: 8px;padding-left: 8px;">
                   <a href="https://tixy.ng" style="color: #467fcf;text-decoration: none;">
-                    <img src="{{asset('assets/images/tixy.png')}}" class=" va-middle" style="display: block;border: 0 none;line-height: 100%;outline: none;text-decoration: none;vertical-align: middle;font-size: 0;" width="24" alt="tixy logo">
+                    <img src="{{asset('assets/images/tixy.png')}}" class=" va-middle" style="display: block;border: 0 none;line-height: 100%;outline: none;text-decoration: none;vertical-align: middle;font-size: 0;" height="64" alt="tixy logo">
                   </a>
                 </td>
               </tr>
