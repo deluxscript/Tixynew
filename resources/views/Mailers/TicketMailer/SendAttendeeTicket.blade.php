@@ -112,8 +112,7 @@ Your tickets are attached to this email.<br>
             <tr>
               <td class="content text-center border-top" style="font-family: Open Sans, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;padding: 40px 48px;text-align: center;border-top: 1px solid #f0f0f0;">
                 <p style="margin: 0 0 1em;">
-                  Do you have any questions? Simply respond to
-                  this email.<br><br>
+                  Do you have any questions? Simply email info@tixy.ng<br><br>
                   Happy planning!<br>
                   Tixy Support
                 </p>
